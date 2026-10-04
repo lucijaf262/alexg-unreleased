@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="an unofficial fan archive documenting alex g's unreleased music, fan compilations, side projects, live history, and recordings."
+        content="an unofficial fan archive of alex g's unreleased music, live history, side projects, fan compilations, and more."
     >
 
     <style>
@@ -24,8 +24,10 @@
            ================================================== */
 
         :root {
+
             --cream: #fff8e8;
             --blue: #5e658a;
+
         }
 
 
@@ -37,13 +39,13 @@
 
             font-family: "make fun of me";
 
-            src:
-                url("fonts/makefunofmeDEMO.otf")
-                format("opentype");
+            src: url("fonts/makefunofmeDEMO.otf")
+                 format("opentype");
 
             font-weight: normal;
 
             font-style: normal;
+
         }
 
 
@@ -52,12 +54,16 @@
            ================================================== */
 
         * {
+
             box-sizing: border-box;
+
         }
 
 
         html {
+
             scroll-behavior: smooth;
+
         }
 
 
@@ -74,9 +80,8 @@
                 Helvetica,
                 sans-serif;
 
-            font-size: 14px;
+            overflow-x: hidden;
 
-            line-height: 1.6;
         }
 
 
@@ -85,6 +90,7 @@
             color: inherit;
 
             text-decoration: none;
+
         }
 
 
@@ -93,6 +99,7 @@
             display: block;
 
             max-width: 100%;
+
         }
 
 
@@ -102,33 +109,34 @@
 
         header {
 
-            position: sticky;
+            position: fixed;
 
             top: 0;
 
-            z-index: 50;
+            left: 0;
 
-            background: var(--cream);
+            width: 100%;
 
-            border-bottom:
-                2px solid var(--blue);
+            z-index: 100;
+
+            mix-blend-mode: multiply;
+
         }
 
 
         nav {
 
-            max-width: 1300px;
-
-            margin: 0 auto;
+            width: 100%;
 
             padding:
-                18px 30px;
+                22px 30px;
 
             display: flex;
 
             justify-content: space-between;
 
             align-items: center;
+
         }
 
 
@@ -138,11 +146,12 @@
                 "make fun of me",
                 sans-serif;
 
-            font-size: 29px;
+            font-size: 30px;
 
-            line-height: 1;
+            line-height: .8;
 
             color: var(--blue);
+
         }
 
 
@@ -157,34 +166,14 @@
             text-transform: uppercase;
 
             letter-spacing: 1px;
-        }
 
-
-        .nav-links a {
-
-            color: var(--blue);
         }
 
 
         .nav-links a:hover {
 
-            text-decoration:
-                underline;
-        }
+            text-decoration: underline;
 
-
-        /* ==================================================
-           MAIN
-           ================================================== */
-
-        main {
-
-            max-width: 1300px;
-
-            margin: 0 auto;
-
-            padding:
-                0 30px 100px;
         }
 
 
@@ -196,23 +185,23 @@
 
             position: relative;
 
-            min-height: 720px;
-
-            border-bottom:
-                2px solid var(--blue);
-
-            overflow: hidden;
+            min-height: 100vh;
 
             padding:
-                100px 0;
+                150px 30px 80px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
         }
 
 
-        .hero-small {
+        .hero-kicker {
 
-            position: relative;
-
-            z-index: 5;
+            margin-bottom: 35px;
 
             font-size: 10px;
 
@@ -220,7 +209,6 @@
 
             letter-spacing: 2px;
 
-            margin-bottom: 40px;
         }
 
 
@@ -228,7 +216,7 @@
 
             position: relative;
 
-            z-index: 5;
+            z-index: 3;
 
             margin: 0;
 
@@ -237,62 +225,53 @@
                 sans-serif;
 
             font-size:
-                clamp(100px, 17vw, 220px);
+                clamp(120px, 19vw, 290px);
 
             font-weight: normal;
 
-            line-height: .62;
+            line-height: .58;
 
-            letter-spacing: -2px;
+            letter-spacing: -5px;
 
-            color: var(--blue);
         }
 
 
-        .hero-title span {
+        .hero-title .line-two {
 
-            display: block;
+            margin-left: 18vw;
 
-            margin-left: 15vw;
         }
 
 
-        .hero-description {
+        .hero-title .line-three {
 
-            position: absolute;
+            margin-left: 5vw;
 
-            z-index: 5;
-
-            left: 3%;
-
-            bottom: 70px;
-
-            max-width: 370px;
-
-            font-size: 12px;
-
-            line-height: 1.9;
         }
-
-
-        /* decorative blue circle */
 
 
         .hero-circle {
 
             position: absolute;
 
-            right: 5%;
+            z-index: 1;
 
-            top: 120px;
+            right: 8vw;
 
-            width: 390px;
+            top: 22vh;
 
-            height: 390px;
+            width: 35vw;
+
+            height: 35vw;
+
+            max-width: 540px;
+
+            max-height: 540px;
 
             border-radius: 50%;
 
             background: var(--blue);
+
         }
 
 
@@ -300,34 +279,36 @@
 
             position: absolute;
 
-            right: 11%;
-
-            top: 205px;
-
             z-index: 4;
+
+            right: 16vw;
+
+            top: 34vh;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 55px;
+            font-size:
+                clamp(35px, 5vw, 75px);
 
-            line-height: .8;
+            line-height: .75;
 
             color: var(--cream);
 
             transform:
-                rotate(-9deg);
+                rotate(-8deg);
+
         }
 
 
-        .hero-star {
+        .hero-mark {
 
             position: absolute;
 
-            right: 35%;
+            left: 5vw;
 
-            bottom: 90px;
+            bottom: 7vh;
 
             font-family:
                 "make fun of me",
@@ -335,90 +316,110 @@
 
             font-size: 90px;
 
-            color: var(--blue);
-
             transform:
-                rotate(13deg);
+                rotate(12deg);
+
+        }
+
+
+        .hero-description {
+
+            position: absolute;
+
+            right: 5vw;
+
+            bottom: 8vh;
+
+            width: 280px;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
         }
 
 
         /* ==================================================
-           INTRO STRIP
+           INTRO
            ================================================== */
 
         .intro {
 
-            display: grid;
+            position: relative;
 
-            grid-template-columns:
-                1fr 2fr;
-
-            border-bottom:
-                2px solid var(--blue);
-        }
-
-
-        .intro-label {
+            min-height: 55vh;
 
             padding:
-                25px 20px;
+                10vh 7vw;
 
-            border-right:
-                2px solid var(--blue);
+            display: flex;
 
-            font-size: 10px;
+            align-items: center;
 
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
         }
 
 
         .intro-text {
 
-            padding:
-                25px 30px;
+            max-width: 950px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 30px;
+            font-size:
+                clamp(55px, 8vw, 125px);
 
-            line-height: .95;
+            line-height: .72;
+
+        }
+
+
+        .intro-small {
+
+            position: absolute;
+
+            right: 8vw;
+
+            bottom: 9vh;
+
+            width: 220px;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
         }
 
 
         /* ==================================================
-           SECTION TITLES
+           GENERAL SECTIONS
            ================================================== */
 
         .section {
 
-            margin-top: 120px;
+            position: relative;
+
+            padding:
+                14vh 7vw;
+
         }
 
 
-        .section-top {
+        .section-label {
 
-            display: flex;
+            margin-bottom: 45px;
 
-            justify-content:
-                space-between;
+            font-size: 10px;
 
-            align-items:
-                baseline;
+            text-transform: uppercase;
 
-            padding-bottom: 15px;
+            letter-spacing: 2px;
 
-            margin-bottom: 35px;
-
-            border-bottom:
-                2px solid var(--blue);
         }
 
 
-        .section-title {
+        .section-heading {
 
             margin: 0;
 
@@ -426,21 +427,15 @@
                 "make fun of me",
                 sans-serif;
 
-            font-size: 62px;
+            font-size:
+                clamp(80px, 12vw, 175px);
 
             font-weight: normal;
 
-            line-height: .8;
-        }
+            line-height: .65;
 
+            letter-spacing: -2px;
 
-        .section-number {
-
-            font-size: 10px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
         }
 
 
@@ -450,12 +445,8 @@
 
         .archive {
 
-            display: grid;
+            margin-top: 100px;
 
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 35px 50px;
         }
 
 
@@ -463,87 +454,75 @@
 
             position: relative;
 
-            min-height: 270px;
+            display: block;
 
             padding:
-                30px;
+                45px 0;
 
-            border:
+            border-top:
                 2px solid var(--blue);
 
-            background:
-                var(--cream);
-
             transition:
-                background .2s ease,
-                color .2s ease,
-                transform .2s ease;
+                padding-left .25s ease;
+
         }
 
 
-        .archive-item:nth-child(2) {
+        .archive-item:last-child {
 
-            margin-top: 70px;
-        }
+            border-bottom:
+                2px solid var(--blue);
 
-
-        .archive-item:nth-child(3) {
-
-            margin-top: -30px;
-        }
-
-
-        .archive-item:nth-child(4) {
-
-            margin-top: 40px;
         }
 
 
         .archive-item:hover {
 
-            background: var(--blue);
+            padding-left: 35px;
 
-            color: var(--cream);
-
-            transform:
-                rotate(-1deg);
         }
 
 
         .archive-number {
 
+            position: absolute;
+
+            left: 0;
+
+            top: 52px;
+
             font-size: 10px;
 
-            margin-bottom: 55px;
         }
 
 
-        .archive-item h3 {
+        .archive-name {
 
-            margin: 0;
+            margin-left: 55px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 47px;
+            font-size:
+                clamp(55px, 8vw, 115px);
 
-            font-weight: normal;
+            line-height: .7;
 
-            line-height: .85;
         }
 
 
-        .archive-item p {
+        .archive-description {
 
-            max-width: 390px;
+            max-width: 360px;
 
             margin:
-                20px 0 0;
+                25px 0 0 55px;
 
-            font-size: 12px;
+            font-size: 11px;
 
             line-height: 1.8;
+
         }
 
 
@@ -551,127 +530,121 @@
 
             position: absolute;
 
-            right: 22px;
+            right: 0;
 
-            bottom: 15px;
+            top: 50%;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 35px;
+            font-size: 55px;
+
+            transform:
+                translateY(-50%);
+
         }
 
 
         /* ==================================================
-           PHOTO AREA
+           PHOTO / IMAGE AREA
            ================================================== */
 
-        .photo-section {
+        .visual-section {
 
             position: relative;
 
-            margin-top: 150px;
-
-            min-height: 600px;
-
-            border-top:
-                2px solid var(--blue);
-
-            border-bottom:
-                2px solid var(--blue);
+            min-height: 90vh;
 
             padding:
-                70px 0;
+                10vh 7vw;
+
         }
 
 
-        .photo-title {
+        .visual-title {
 
             position: relative;
 
             z-index: 3;
 
-            margin: 0;
-
-            max-width: 500px;
+            max-width: 800px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 80px;
+            font-size:
+                clamp(70px, 11vw, 160px);
 
-            font-weight: normal;
+            line-height: .67;
 
-            line-height: .75;
         }
 
 
-        .photo-note {
-
-            position: relative;
-
-            z-index: 3;
-
-            max-width: 300px;
-
-            margin-top: 45px;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-
-        /*
-           temporary photo placeholder
-
-           we'll replace this with your actual
-           image later
-        */
-
-
-        .photo-placeholder {
+        .visual-placeholder {
 
             position: absolute;
 
-            right: 5%;
+            z-index: 2;
 
-            top: 75px;
+            right: 8vw;
 
-            width: 48%;
+            top: 18vh;
 
-            height: 450px;
+            width: 43vw;
 
-            border:
-                2px solid var(--blue);
+            height: 58vh;
+
+            max-width: 650px;
 
             background: var(--blue);
 
             display: flex;
 
-            justify-content: center;
-
             align-items: center;
 
-            text-align: center;
+            justify-content: center;
 
-            padding: 30px;
+            transform:
+                rotate(2deg);
+
         }
 
 
-        .photo-placeholder span {
+        .visual-placeholder span {
+
+            color: var(--cream);
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 35px;
+            font-size: 55px;
 
-            line-height: .9;
+            line-height: .7;
 
-            color: var(--cream);
+            text-align: center;
+
+        }
+
+
+        .visual-note {
+
+            position: absolute;
+
+            z-index: 4;
+
+            left: 12vw;
+
+            bottom: 13vh;
+
+            max-width: 250px;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
         }
 
 
@@ -679,22 +652,12 @@
            LIVE
            ================================================== */
 
-        .live {
+        .live-section {
 
-            display: grid;
+            min-height: 80vh;
 
-            grid-template-columns:
-                1.5fr .5fr;
-
-            gap: 25px;
-        }
-
-
-        .live-main {
-
-            min-height: 330px;
-
-            padding: 40px;
+            padding:
+                15vh 7vw;
 
             background: var(--blue);
 
@@ -703,66 +666,68 @@
         }
 
 
-        .live-main h3 {
+        .live-section .section-label {
 
-            margin: 0 0 20px;
+            color: var(--cream);
+
+        }
+
+
+        .live-heading {
+
+            max-width: 1000px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 70px;
+            font-size:
+                clamp(90px, 14vw, 200px);
 
-            font-weight: normal;
-
-            line-height: .75;
+            line-height: .6;
 
             color: var(--cream);
+
         }
 
 
-        .live-main p {
+        .live-description {
 
-            max-width: 550px;
+            max-width: 500px;
+
+            margin-top: 80px;
 
             font-size: 12px;
 
             line-height: 1.9;
 
             color: var(--cream);
+
         }
 
 
-        .live-side {
+        .live-line {
 
-            padding: 40px;
+            margin-top: 100px;
 
-            border:
-                2px solid var(--blue);
-        }
+            padding-top: 20px;
 
+            border-top:
+                2px solid var(--cream);
 
-        .live-side h3 {
+            display: flex;
 
-            margin: 0 0 20px;
+            justify-content:
+                space-between;
 
-            font-family:
-                "make fun of me",
-                sans-serif;
+            font-size: 10px;
 
-            font-size: 42px;
+            text-transform: uppercase;
 
-            font-weight: normal;
+            letter-spacing: 1px;
 
-            line-height: .8;
-        }
+            color: var(--cream);
 
-
-        .live-side p {
-
-            font-size: 12px;
-
-            line-height: 1.9;
         }
 
 
@@ -770,77 +735,63 @@
            SUPPORT
            ================================================== */
 
-        .support {
+        .support-section {
 
-            position: relative;
+            min-height: 85vh;
 
             padding:
-                65px 50px;
+                16vh 7vw;
 
-            border:
-                2px solid var(--blue);
-
-            overflow: hidden;
         }
 
 
-        .support h3 {
+        .support-heading {
 
-            position: relative;
-
-            z-index: 2;
-
-            margin: 0;
-
-            max-width: 700px;
+            max-width: 1000px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 80px;
+            font-size:
+                clamp(80px, 13vw, 185px);
 
-            font-weight: normal;
+            line-height: .6;
 
-            line-height: .7;
         }
 
 
-        .support p {
+        .support-description {
 
-            position: relative;
-
-            z-index: 2;
-
-            max-width: 500px;
+            max-width: 480px;
 
             margin:
-                40px 0 25px;
+                80px 0 40px 20vw;
 
             font-size: 12px;
 
             line-height: 1.9;
+
         }
 
 
         .support-links {
 
-            position: relative;
-
-            z-index: 2;
+            margin-left: 20vw;
 
             display: flex;
 
             flex-wrap: wrap;
 
             gap: 10px;
+
         }
 
 
         .support-link {
 
             padding:
-                10px 15px;
+                12px 18px;
 
             border:
                 2px solid var(--blue);
@@ -851,37 +802,15 @@
 
             letter-spacing: 1px;
 
-            background:
-                var(--cream);
         }
 
 
         .support-link:hover {
 
-            background:
-                var(--blue);
+            background: var(--blue);
 
-            color:
-                var(--cream);
-        }
+            color: var(--cream);
 
-
-        .support-shape {
-
-            position: absolute;
-
-            right: -80px;
-
-            bottom: -110px;
-
-            width: 350px;
-
-            height: 350px;
-
-            border-radius: 50%;
-
-            background:
-                var(--blue);
         }
 
 
@@ -889,89 +818,74 @@
            CONTACT
            ================================================== */
 
-        .contact {
+        .contact-section {
 
-            display: grid;
+            position: relative;
 
-            grid-template-columns:
-                1fr 1fr;
+            min-height: 75vh;
 
-            min-height: 300px;
+            padding:
+                15vh 7vw;
 
-            border:
-                2px solid var(--blue);
         }
 
 
-        .contact-left {
+        .contact-heading {
 
-            padding: 45px;
-        }
-
-
-        .contact-left h3 {
-
-            margin: 0 0 20px;
+            max-width: 900px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 65px;
+            font-size:
+                clamp(90px, 14vw, 200px);
 
-            font-weight: normal;
+            line-height: .58;
 
-            line-height: .7;
         }
 
 
-        .contact-left p {
+        .contact-description {
 
-            max-width: 400px;
+            margin-top: 80px;
 
-            font-size: 12px;
+            max-width: 330px;
 
-            line-height: 1.9;
+            font-size: 11px;
+
+            line-height: 1.8;
+
         }
 
 
-        .contact-right {
+        .contact-email {
 
-            display: flex;
+            display: inline-block;
 
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 40px;
-
-            background:
-                var(--blue);
-        }
-
-
-        .email {
+            margin-top: 30px;
 
             padding:
                 15px 20px;
 
-            border:
-                2px solid var(--cream);
+            background: var(--blue);
 
-            color:
-                var(--cream);
+            color: var(--cream);
 
             font-size: 12px;
+
         }
 
 
-        .email:hover {
+        .contact-email:hover {
 
-            background:
-                var(--cream);
+            background: var(--cream);
 
-            color:
-                var(--blue);
+            color: var(--blue);
+
+            outline:
+                2px solid var(--blue);
+
         }
 
 
@@ -981,9 +895,8 @@
 
         footer {
 
-            margin-top: 130px;
-
-            padding-top: 20px;
+            padding:
+                25px 30px;
 
             border-top:
                 2px solid var(--blue);
@@ -1000,6 +913,7 @@
             text-transform: uppercase;
 
             letter-spacing: 1px;
+
         }
 
 
@@ -1013,13 +927,15 @@
             nav {
 
                 padding:
-                    15px 17px;
+                    18px;
+
             }
 
 
             .logo {
 
                 font-size: 21px;
+
             }
 
 
@@ -1028,235 +944,333 @@
                 gap: 10px;
 
                 font-size: 8px;
-            }
 
-
-            main {
-
-                padding:
-                    0 17px 70px;
             }
 
 
             .hero {
 
-                min-height: 600px;
-
                 padding:
-                    70px 0;
+                    130px 18px 50px;
+
+                min-height:
+                    100vh;
+
             }
 
 
             .hero-title {
 
                 font-size:
-                    85px;
+                    90px;
+
+                letter-spacing:
+                    -2px;
+
             }
 
 
-            .hero-title span {
+            .hero-title .line-two {
 
                 margin-left: 12vw;
+
+            }
+
+
+            .hero-title .line-three {
+
+                margin-left: 2vw;
+
             }
 
 
             .hero-circle {
 
-                width: 210px;
+                width: 65vw;
 
-                height: 210px;
+                height: 65vw;
 
-                right: -45px;
+                right: -12vw;
 
-                top: 145px;
+                top: 35vh;
+
             }
 
 
             .hero-circle-text {
 
-                right: 8%;
+                right: 12vw;
 
-                top: 205px;
+                top: 44vh;
 
                 font-size: 35px;
+
             }
 
 
-            .hero-star {
+            .hero-mark {
 
-                right: 45%;
+                left: 5vw;
 
-                bottom: 100px;
+                bottom: 15vh;
 
                 font-size: 55px;
+
             }
 
 
             .hero-description {
 
-                left: 0;
+                right: 18px;
 
-                bottom: 40px;
+                bottom: 5vh;
 
-                max-width: 280px;
+                width: 210px;
+
+                font-size: 10px;
+
             }
 
 
             .intro {
 
-                grid-template-columns: 1fr;
-            }
+                min-height:
+                    60vh;
 
+                padding:
+                    12vh 7vw;
 
-            .intro-label {
-
-                border-right: none;
-
-                border-bottom:
-                    2px solid var(--blue);
             }
 
 
             .intro-text {
 
-                font-size: 24px;
+                font-size:
+                    58px;
+
+            }
+
+
+            .intro-small {
+
+                right: 7vw;
+
+                bottom: 7vh;
+
             }
 
 
             .section {
 
-                margin-top: 80px;
+                padding:
+                    12vh 7vw;
+
             }
 
 
-            .section-title {
+            .section-heading {
 
-                font-size: 45px;
+                font-size:
+                    80px;
+
             }
 
 
             .archive {
 
-                grid-template-columns: 1fr;
+                margin-top: 70px;
 
-                gap: 15px;
-            }
-
-
-            .archive-item:nth-child(2),
-            .archive-item:nth-child(3),
-            .archive-item:nth-child(4) {
-
-                margin-top: 0;
             }
 
 
             .archive-item {
 
-                min-height: 210px;
+                padding:
+                    35px 0;
+
             }
 
 
-            .archive-item h3 {
+            .archive-name {
 
-                font-size: 39px;
+                margin-left: 40px;
+
+                font-size:
+                    55px;
+
             }
 
 
-            .photo-section {
+            .archive-number {
 
-                min-height: 700px;
+                top: 42px;
+
+            }
+
+
+            .archive-description {
+
+                margin-left: 40px;
+
+            }
+
+
+            .archive-arrow {
+
+                font-size: 35px;
+
+            }
+
+
+            .visual-section {
+
+                min-height:
+                    800px;
 
                 padding:
-                    50px 0;
+                    10vh 7vw;
+
             }
 
 
-            .photo-title {
+            .visual-title {
 
-                font-size: 58px;
+                font-size:
+                    70px;
+
             }
 
 
-            .photo-placeholder {
+            .visual-placeholder {
 
-                position: relative;
+                position:
+                    absolute;
 
-                right: auto;
+                top: 35vh;
 
-                top: auto;
+                right: 5vw;
 
-                width: 100%;
+                width: 80vw;
 
-                height: 330px;
+                height: 42vh;
 
-                margin-top: 60px;
             }
 
 
-            .live {
+            .visual-note {
 
-                grid-template-columns: 1fr;
+                left: 7vw;
+
+                bottom: 5vh;
+
             }
 
 
-            .live-main h3 {
+            .live-section {
 
-                font-size: 55px;
+                min-height:
+                    75vh;
+
+                padding:
+                    12vh 7vw;
+
             }
 
 
-            .support {
+            .live-heading {
 
-                padding: 35px 25px;
+                font-size:
+                    90px;
+
             }
 
 
-            .support h3 {
+            .live-description {
 
-                font-size: 57px;
+                margin-top:
+                    60px;
+
             }
 
 
-            .support-shape {
+            .live-line {
 
-                width: 220px;
+                margin-top:
+                    70px;
 
-                height: 220px;
+                flex-direction:
+                    column;
 
-                right: -80px;
+                gap: 10px;
 
-                bottom: -80px;
             }
 
 
-            .contact {
+            .support-section {
 
-                grid-template-columns: 1fr;
+                min-height:
+                    75vh;
+
+                padding:
+                    12vh 7vw;
+
             }
 
 
-            .contact-left {
+            .support-heading {
 
-                padding: 30px;
+                font-size:
+                    80px;
+
             }
 
 
-            .contact-left h3 {
+            .support-description {
 
-                font-size: 52px;
+                margin:
+                    70px 0 35px;
+
             }
 
 
-            .contact-right {
+            .support-links {
 
-                min-height: 180px;
+                margin-left: 0;
 
-                padding: 30px;
+            }
+
+
+            .contact-section {
+
+                min-height:
+                    70vh;
+
+                padding:
+                    12vh 7vw;
+
+            }
+
+
+            .contact-heading {
+
+                font-size:
+                    85px;
+
+            }
+
+
+            .contact-description {
+
+                margin-top:
+                    65px;
+
             }
 
 
             footer {
+
+                padding:
+                    20px 18px;
 
                 flex-direction:
                     column;
@@ -1280,7 +1294,6 @@
     <header>
 
         <nav>
-
 
             <a
                 href="#"
@@ -1310,546 +1323,500 @@
 
             </div>
 
-
         </nav>
 
     </header>
 
 
 
-    <main>
+    <!-- ==================================================
+         HERO
+         ================================================== -->
+
+    <section class="hero">
 
 
-        <!-- ==================================================
-             HERO
-             ================================================== -->
-
-        <section class="hero">
+        <div class="hero-kicker">
+            unofficial fan archive
+        </div>
 
 
-            <div class="hero-small">
-                unofficial fan archive
-            </div>
+        <h1 class="hero-title">
 
-
-            <h1 class="hero-title">
-
+            <span>
                 alex
+            </span>
 
-                <span>
-                    g.
-                </span>
+            <span class="line-two">
+                g.
+            </span>
 
+            <span class="line-three">
                 unreleased
-
-            </h1>
-
-
-            <div class="hero-circle"></div>
-
-
-            <div class="hero-circle-text">
-
-                unreleased<br>
-                archive
-
-            </div>
-
-
-            <div class="hero-star">
-                ✳
-            </div>
-
-
-            <p class="hero-description">
-
-                a fan-made archive documenting unreleased
-                recordings, fan compilations, unreleased
-                albums, side projects, live history,
-                and other material connected to alex g.
-
-            </p>
-
-
-        </section>
-
-
-
-        <!-- ==================================================
-             INTRO
-             ================================================== -->
-
-        <section class="intro">
-
-
-            <div class="intro-label">
-                what is this?
-            </div>
-
-
-            <div class="intro-text">
-
-                a place to find the music that
-                never made it onto an official release.
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ==================================================
-             ARCHIVE
-             ================================================== -->
-
-        <section
-            class="section"
-            id="archive"
-        >
-
-
-            <div class="section-top">
-
-                <h2 class="section-title">
-                    archive
-                </h2>
-
-
-                <span class="section-number">
-                    01 / music
-                </span>
-
-            </div>
-
-
-            <div class="archive">
-
-
-                <a
-                    href="#"
-                    class="archive-item"
-                >
-
-                    <div class="archive-number">
-                        01
-                    </div>
-
-
-                    <h3>
-                        fan comps
-                    </h3>
-
-
-                    <p>
-
-                        fan-made compilations collecting
-                        recordings from different eras.
-
-                    </p>
-
-
-                    <div class="archive-arrow">
-                        →
-                    </div>
-
-                </a>
-
-
-
-                <a
-                    href="#"
-                    class="archive-item"
-                >
-
-                    <div class="archive-number">
-                        02
-                    </div>
-
-
-                    <h3>
-                        unreleased albums
-                    </h3>
-
-
-                    <p>
-
-                        known projects and albums that were
-                        never officially released.
-
-                    </p>
-
-
-                    <div class="archive-arrow">
-                        →
-                    </div>
-
-                </a>
-
-
-
-                <a
-                    href="#"
-                    class="archive-item"
-                >
-
-                    <div class="archive-number">
-                        03
-                    </div>
-
-
-                    <h3>
-                        side projects
-                    </h3>
-
-
-                    <p>
-
-                        aliases, collaborations, side projects,
-                        and music outside the main discography.
-
-                    </p>
-
-
-                    <div class="archive-arrow">
-                        →
-                    </div>
-
-                </a>
-
-
-
-                <a
-                    href="#"
-                    class="archive-item"
-                >
-
-                    <div class="archive-number">
-                        04
-                    </div>
-
-
-                    <h3>
-                        live history
-                    </h3>
-
-
-                    <p>
-
-                        performances, shows, setlists,
-                        venues, dates, and live recordings.
-
-                    </p>
-
-
-                    <div class="archive-arrow">
-                        →
-                    </div>
-
-                </a>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             PHOTO SECTION
-             ================================================== -->
-
-        <section class="photo-section">
-
-
-            <h2 class="photo-title">
-
-                the archive<br>
-                keeps growing.
-
-            </h2>
-
-
-            <p class="photo-note">
-
-                photos and scans can go here.
-                we'll add your actual images once
-                the layout is finished.
-
-            </p>
-
-
-            <div class="photo-placeholder">
-
-                <span>
-
-                    your<br>
-                    photo<br>
-                    here
-
-                </span>
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ==================================================
-             LIVE
-             ================================================== -->
-
-        <section
-            class="section"
-            id="live"
-        >
-
-
-            <div class="section-top">
-
-                <h2 class="section-title">
-                    live
-                </h2>
-
-
-                <span class="section-number">
-                    02 / history
-                </span>
-
-            </div>
-
-
-            <div class="live">
-
-
-                <div class="live-main">
-
-
-                    <h3>
-                        live history
-                    </h3>
-
-
-                    <p>
-
-                        a growing collection of performances,
-                        live recordings, shows, setlists,
-                        venues, and other live documentation.
-
-                    </p>
-
-
-                </div>
-
-
-                <div class="live-side">
-
-
-                    <h3>
-                        shows & setlists
-                    </h3>
-
-
-                    <p>
-
-                        eventually this can become a searchable
-                        timeline of individual shows and performances.
-
-                    </p>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             SUPPORT
-             ================================================== -->
-
-        <section
-            class="section"
-            id="support"
-        >
-
-
-            <div class="section-top">
-
-                <h2 class="section-title">
-                    support alex
-                </h2>
-
-
-                <span class="section-number">
-                    03 / official
-                </span>
-
-            </div>
-
-
-            <div class="support">
-
-
-                <h3>
-                    listen to the<br>
-                    official music.
-                </h3>
-
-
-                <p>
-
-                    this is an unofficial fan archive.
-                    if you enjoy alex g's music,
-                    support the official releases
-                    and the artist directly whenever possible.
-
-                </p>
-
-
-                <div class="support-links">
-
-
-                    <a
-                        href="#"
-                        class="support-link"
-                    >
-                        official site ↗
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="support-link"
-                    >
-                        bandcamp ↗
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="support-link"
-                    >
-                        spotify ↗
-                    </a>
-
-
-                    <a
-                        href="#"
-                        class="support-link"
-                    >
-                        apple music ↗
-                    </a>
-
-
-                </div>
-
-
-                <div class="support-shape"></div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             CONTACT
-             ================================================== -->
-
-        <section
-            class="section"
-            id="contact"
-        >
-
-
-            <div class="section-top">
-
-                <h2 class="section-title">
-                    contact
-                </h2>
-
-
-                <span class="section-number">
-                    04 / contribute
-                </span>
-
-            </div>
-
-
-            <div class="contact">
-
-
-                <div class="contact-left">
-
-
-                    <h3>
-                        have something?
-                    </h3>
-
-
-                    <p>
-
-                        found an error, have information
-                        about a recording, or have something
-                        that could help expand the archive?
-
-                        <br><br>
-
-                        send me an email.
-
-                    </p>
-
-
-                </div>
-
-
-                <div class="contact-right">
-
-
-                    <a
-                        href="mailto:lucija.f262@gmail.com"
-                        class="email"
-                    >
-
-                        lucija.f262@gmail.com ↗
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             FOOTER
-             ================================================== -->
-
-        <footer>
-
-            <span>
-                alexgunreleased.com
             </span>
 
+        </h1>
+
+
+        <div class="hero-circle"></div>
+
+
+        <div class="hero-circle-text">
+
+            unreleased<br>
+            archive
+
+        </div>
+
+
+        <div class="hero-mark">
+            ✳
+        </div>
+
+
+        <p class="hero-description">
+
+            a fan-made archive for unreleased music,
+            fan compilations, unreleased albums,
+            side projects, live history, and other
+            recordings connected to alex g.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         INTRO
+         ================================================== -->
+
+    <section class="intro">
+
+
+        <div class="intro-text">
+
+            music that<br>
+            never quite<br>
+            made it out.
+
+        </div>
+
+
+        <div class="intro-small">
+
+            this is an unofficial fan project.
+            the goal is to make information about
+            alex g's unreleased material easier
+            to discover and navigate.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ARCHIVE
+         ================================================== -->
+
+    <section
+        class="section"
+        id="archive"
+    >
+
+
+        <div class="section-label">
+            01 / archive
+        </div>
+
+
+        <h2 class="section-heading">
+            archive
+        </h2>
+
+
+        <div class="archive">
+
+
+            <a
+                href="#"
+                class="archive-item"
+            >
+
+                <span class="archive-number">
+                    01
+                </span>
+
+
+                <div class="archive-name">
+                    fan comps
+                </div>
+
+
+                <div class="archive-description">
+
+                    fan-made compilations collecting
+                    unreleased recordings from different
+                    periods and eras.
+
+                </div>
+
+
+                <span class="archive-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#"
+                class="archive-item"
+            >
+
+                <span class="archive-number">
+                    02
+                </span>
+
+
+                <div class="archive-name">
+                    unreleased albums
+                </div>
+
+
+                <div class="archive-description">
+
+                    known albums, projects, and collections
+                    that were never officially released.
+
+                </div>
+
+
+                <span class="archive-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#"
+                class="archive-item"
+            >
+
+                <span class="archive-number">
+                    03
+                </span>
+
+
+                <div class="archive-name">
+                    side projects
+                </div>
+
+
+                <div class="archive-description">
+
+                    aliases, collaborations, side projects,
+                    and music outside the main discography.
+
+                </div>
+
+
+                <span class="archive-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#"
+                class="archive-item"
+            >
+
+                <span class="archive-number">
+                    04
+                </span>
+
+
+                <div class="archive-name">
+                    live history
+                </div>
+
+
+                <div class="archive-description">
+
+                    performances, shows, setlists,
+                    venues, dates, and live recordings.
+
+                </div>
+
+
+                <span class="archive-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PHOTO AREA
+         ================================================== -->
+
+    <section class="visual-section">
+
+
+        <div class="visual-title">
+
+            from the<br>
+            archive
+
+        </div>
+
+
+        <div class="visual-placeholder">
 
             <span>
-                unofficial fan archive · not affiliated with alex g
+
+                photo<br>
+                goes<br>
+                here
+
             </span>
 
-        </footer>
+        </div>
 
 
-    </main>
+        <div class="visual-note">
+
+            photos, scans, artwork, flyers,
+            screenshots, and other archive material
+            can go here.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LIVE
+         ================================================== -->
+
+    <section
+        class="live-section"
+        id="live"
+    >
+
+
+        <div class="section-label">
+            02 / live history
+        </div>
+
+
+        <div class="live-heading">
+
+            live<br>
+            history
+
+        </div>
+
+
+        <div class="live-description">
+
+            a growing record of performances,
+            live recordings, setlists, venues,
+            dates, and notable shows.
+
+            <br><br>
+
+            eventually this can become a full
+            searchable timeline.
+
+        </div>
+
+
+        <div class="live-line">
+
+            <span>
+                performances
+            </span>
+
+            <span>
+                recordings
+            </span>
+
+            <span>
+                setlists
+            </span>
+
+            <span>
+                venues
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SUPPORT
+         ================================================== -->
+
+    <section
+        class="support-section"
+        id="support"
+    >
+
+
+        <div class="section-label">
+            03 / support alex
+        </div>
+
+
+        <div class="support-heading">
+
+            listen to<br>
+            the official<br>
+            music.
+
+        </div>
+
+
+        <p class="support-description">
+
+            this is an unofficial fan archive.
+            if you enjoy alex g's music, please
+            support the official releases and
+            the artist directly whenever possible.
+
+        </p>
+
+
+        <div class="support-links">
+
+
+            <a
+                href="#"
+                class="support-link"
+            >
+                official site ↗
+            </a>
+
+
+            <a
+                href="#"
+                class="support-link"
+            >
+                bandcamp ↗
+            </a>
+
+
+            <a
+                href="#"
+                class="support-link"
+            >
+                spotify ↗
+            </a>
+
+
+            <a
+                href="#"
+                class="support-link"
+            >
+                apple music ↗
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CONTACT
+         ================================================== -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+
+        <div class="section-label">
+            04 / contact
+        </div>
+
+
+        <div class="contact-heading">
+
+            have<br>
+            something?
+
+        </div>
+
+
+        <p class="contact-description">
+
+            found an error, have information
+            about a recording, or have something
+            that could help expand the archive?
+
+            <br><br>
+
+            send it my way.
+
+        </p>
+
+
+        <a
+            href="mailto:lucija.f262@gmail.com"
+            class="contact-email"
+        >
+
+            lucija.f262@gmail.com ↗
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer>
+
+        <span>
+            alexgunreleased.com
+        </span>
+
+
+        <span>
+            unofficial fan archive · not affiliated with alex g
+        </span>
+
+    </footer>
 
 
 </body>
