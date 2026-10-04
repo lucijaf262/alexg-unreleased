@@ -1,558 +1,1526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>alex g — unreleased archive</title>
-    <meta name="description" content="a fan-made archive documenting Alex G's unreleased music, recordings, compilations, and live material">
+
+    <meta
+        name="description"
+        content="a fan-made archive documenting alex g's unreleased music, albums, compilations, demos, alternate versions, and live recordings."
+    >
 
     <style>
+
+        /* =========================================
+           font
+        ========================================= */
+
+        @font-face {
+            font-family: "make fun of me";
+
+            src: url("fonts/makefunofmeDEMO.otf")
+                format("opentype");
+
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        /* =========================================
+           colors
+        ========================================= */
+
+        :root {
+
+            --cream: #fff8e8;
+
+            --paper: #fffdf7;
+
+            --ink: #19191c;
+
+            --muted: #69696f;
+
+            --blue: #5e658a;
+
+            --blue-light: #c9cde3;
+
+            --pink: #efb5c4;
+
+            --yellow: #f3d77b;
+
+            --green: #b9d7b0;
+
+            --orange: #f0b27a;
+
+            --purple: #cbbbe5;
+
+            --line: #24242a;
+
+        }
+
+
+        /* =========================================
+           reset
+        ========================================= */
+
         * {
             box-sizing: border-box;
         }
+
 
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             margin: 0;
-            background: #f7f5ef;
-            color: #171717;
-            font-family: Arial, Helvetica, sans-serif;
+
+            background: var(--cream);
+
+            color: var(--ink);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-size: 14px;
+
             line-height: 1.6;
         }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
-        /* NAVIGATION */
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================
+           header
+        ========================================= */
 
         header {
-            border-bottom: 1px solid #c9c6bd;
-            background: #f7f5ef;
+
             position: sticky;
+
             top: 0;
-            z-index: 10;
+
+            z-index: 100;
+
+            background:
+                rgba(255, 248, 232, 0.95);
+
+            backdrop-filter: blur(8px);
+
+            border-bottom:
+                2px solid var(--line);
         }
+
 
         nav {
-            max-width: 1100px;
+
+            max-width: 1150px;
+
             margin: auto;
-            padding: 15px 25px;
+
+            padding:
+                13px 25px;
+
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
+
+            gap: 20px;
         }
+
 
         .logo {
-            font-weight: bold;
-            letter-spacing: -0.5px;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 27px;
+
+            letter-spacing: .5px;
         }
 
-        .logo span {
-            color: #668ba5;
+
+        .logo .slash {
+            color: var(--blue);
         }
+
 
         .nav-links {
+
             display: flex;
-            gap: 24px;
-            font-size: 12px;
-            color: #555;
+
+            gap: 22px;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .5px;
         }
+
+
+        .nav-links a {
+
+            border-bottom:
+                1px solid transparent;
+
+            transition:
+                color .15s ease,
+                border-color .15s ease;
+        }
+
 
         .nav-links a:hover {
-            color: #668ba5;
+
+            color: var(--blue);
+
+            border-color: var(--blue);
         }
 
-        /* MAIN */
+
+        /* =========================================
+           main
+        ========================================= */
 
         main {
-            max-width: 1100px;
+
+            max-width: 1150px;
+
             margin: auto;
-            padding: 70px 25px 90px;
+
+            padding:
+                55px 25px 100px;
         }
 
-        /* HERO */
+
+        /* =========================================
+           hero
+        ========================================= */
 
         .hero {
-            max-width: 750px;
-            margin-bottom: 75px;
+
+            position: relative;
+
+            min-height: 430px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding:
+                30px 0 70px;
         }
+
 
         .eyebrow {
-            color: #668ba5;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
 
-        h1 {
-            font-size: clamp(48px, 8vw, 92px);
-            line-height: .95;
-            letter-spacing: -5px;
-            margin: 0 0 25px;
-            font-weight: 700;
-        }
+            color: var(--blue);
 
-        .hero p {
-            max-width: 590px;
-            color: #555;
-            font-size: 15px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        /* SEARCH */
-
-        .search {
-            margin: 0 0 65px;
-        }
-
-        .search input {
-            width: 100%;
-            border: 1px solid #bdbab1;
-            background: #fffefa;
-            padding: 15px 17px;
-            font-family: inherit;
-            font-size: 13px;
-            outline: none;
-        }
-
-        .search input:focus {
-            border-color: #668ba5;
-        }
-
-        /* SECTIONS */
-
-        .section {
-            margin-top: 75px;
-        }
-
-        .section-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            border-bottom: 1px solid #c9c6bd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .section-heading h2 {
-            font-size: 22px;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        .section-heading span {
-            color: #888;
-            font-size: 11px;
-        }
-
-        /* ARCHIVE GRID */
-
-        .archive-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .archive-item {
-            background: #fffefa;
-            border: 1px solid #c9c6bd;
-            padding: 24px;
-            min-height: 145px;
-            transition: .15s ease;
-        }
-
-        .archive-item:hover {
-            border-color: #668ba5;
-            background: #f1f5f7;
-        }
-
-        .archive-number {
             font-size: 10px;
-            color: #999;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
             margin-bottom: 22px;
         }
 
-        .archive-item h3 {
-            font-size: 20px;
-            font-weight: 500;
-            margin: 0 0 6px;
+
+        h1 {
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-weight: normal;
+
+            font-size:
+                clamp(72px, 13vw, 155px);
+
+            line-height: .73;
+
+            letter-spacing: 1px;
+
+            margin: 0;
+
+            max-width: 950px;
+
+            color: var(--ink);
         }
+
+
+        .hero-description {
+
+            margin-top: 45px;
+
+            max-width: 570px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        .hero-star {
+
+            position: absolute;
+
+            right: 8%;
+
+            top: 35px;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 100px;
+
+            color: var(--blue);
+
+            transform:
+                rotate(8deg);
+        }
+
+
+        .hero-circle {
+
+            position: absolute;
+
+            right: 16%;
+
+            bottom: 70px;
+
+            width: 75px;
+
+            height: 75px;
+
+            border-radius: 50%;
+
+            background: var(--pink);
+
+            z-index: -1;
+        }
+
+
+        .hero-line {
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 20px;
+
+            width: 210px;
+
+            height: 12px;
+
+            background: var(--yellow);
+
+            transform:
+                rotate(-2deg);
+
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           search
+        ========================================= */
+
+        .search {
+
+            margin:
+                0 0 75px;
+        }
+
+
+        .search input {
+
+            width: 100%;
+
+            padding:
+                18px 20px;
+
+            border:
+                2px solid var(--line);
+
+            border-radius: 2px;
+
+            background: var(--paper);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 13px;
+
+            outline: none;
+
+            box-shadow:
+                5px 5px 0 var(--blue);
+
+            transition:
+                box-shadow .15s ease,
+                border-color .15s ease;
+        }
+
+
+        .search input:focus {
+
+            border-color:
+                var(--blue);
+
+            box-shadow:
+                7px 7px 0 var(--pink);
+        }
+
+
+        /* =========================================
+           sections
+        ========================================= */
+
+        .section {
+
+            margin-top: 85px;
+        }
+
+
+        .section-heading {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                baseline;
+
+            border-bottom:
+                2px solid var(--line);
+
+            padding-bottom: 10px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 42px;
+
+            font-weight: normal;
+
+            margin: 0;
+        }
+
+
+        .section-heading span {
+
+            color: var(--blue);
+
+            font-size: 10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================
+           archive grid
+        ========================================= */
+
+        .archive-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .archive-item {
+
+            position: relative;
+
+            min-height: 215px;
+
+            padding: 26px;
+
+            border:
+                2px solid var(--line);
+
+            border-radius: 3px;
+
+            transition:
+                transform .15s ease,
+                box-shadow .15s ease;
+        }
+
+
+        .archive-item:hover {
+
+            transform:
+                translate(-4px, -4px);
+
+            box-shadow:
+                7px 7px 0 var(--line);
+        }
+
+
+        /* card colors */
+
+        .archive-item:nth-child(1) {
+
+            background:
+                var(--blue-light);
+        }
+
+
+        .archive-item:nth-child(2) {
+
+            background:
+                var(--pink);
+        }
+
+
+        .archive-item:nth-child(3) {
+
+            background:
+                var(--yellow);
+        }
+
+
+        .archive-item:nth-child(4) {
+
+            background:
+                var(--green);
+        }
+
+
+        .archive-number {
+
+            color:
+                rgba(25,25,28,.55);
+
+            font-size: 10px;
+
+            margin-bottom: 28px;
+        }
+
+
+        .archive-item h3 {
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 36px;
+
+            font-weight: normal;
+
+            line-height: 1;
+
+            margin:
+                0 0 12px;
+        }
+
 
         .archive-item p {
-            color: #777;
-            font-size: 12px;
-            margin: 0;
+
             max-width: 400px;
+
+            color:
+                rgba(25,25,28,.75);
+
+            font-size: 12px;
+
+            line-height: 1.75;
+
+            margin: 0;
         }
+
 
         .archive-arrow {
-            float: right;
-            color: #668ba5;
-            font-size: 18px;
+
+            position: absolute;
+
+            right: 20px;
+
+            bottom: 14px;
+
+            font-size: 25px;
+
+            color: var(--blue);
         }
 
-        /* SUPPORT */
+
+        /* =========================================
+           support
+        ========================================= */
 
         .support-box {
-            background: #e7edf0;
-            border: 1px solid #b8c7cf;
-            padding: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                var(--blue);
+
+            color: white;
+
+            border:
+                2px solid var(--line);
+
+            padding:
+                35px;
+
+            box-shadow:
+                7px 7px 0 var(--line);
         }
+
+
+        .support-box::after {
+
+            content: "♡";
+
+            position: absolute;
+
+            right: 35px;
+
+            top: 5px;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 120px;
+
+            color:
+                rgba(255,255,255,.13);
+
+            transform:
+                rotate(12deg);
+        }
+
 
         .support-box h3 {
-            font-size: 22px;
-            margin: 0 0 8px;
-            font-weight: 500;
+
+            position: relative;
+
+            z-index: 1;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 42px;
+
+            font-weight: normal;
+
+            margin:
+                0 0 10px;
         }
+
 
         .support-box p {
-            color: #555;
+
+            position: relative;
+
+            z-index: 1;
+
             max-width: 650px;
-            margin: 0 0 22px;
+
+            color:
+                rgba(255,255,255,.85);
+
             font-size: 13px;
+
+            line-height: 1.8;
+
+            margin:
+                0 0 25px;
         }
+
 
         .links {
+
+            position: relative;
+
+            z-index: 1;
+
             display: flex;
+
             flex-wrap: wrap;
-            gap: 8px;
+
+            gap: 9px;
         }
+
 
         .link {
-            border: 1px solid #aebcc3;
-            background: #f7f9fa;
-            padding: 8px 12px;
+
+            background:
+                var(--cream);
+
+            color:
+                var(--ink);
+
+            border:
+                2px solid var(--line);
+
+            padding:
+                9px 13px;
+
             font-size: 11px;
+
+            transition:
+                .15s ease;
         }
+
 
         .link:hover {
-            background: #668ba5;
-            border-color: #668ba5;
-            color: white;
+
+            background:
+                var(--pink);
+
+            transform:
+                translateY(-2px);
         }
 
-        /* CONTACT */
+
+        /* =========================================
+           live
+        ========================================= */
+
+        .live-card:nth-child(1) {
+
+            background:
+                var(--orange);
+        }
+
+
+        .live-card:nth-child(2) {
+
+            background:
+                var(--purple);
+        }
+
+
+        /* =========================================
+           contact
+        ========================================= */
 
         .contact-box {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 30px;
-            align-items: center;
-            border: 1px solid #c9c6bd;
-            background: #fffefa;
-            padding: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                var(--pink);
+
+            border:
+                2px solid var(--line);
+
+            padding:
+                35px;
+
+            box-shadow:
+                7px 7px 0 var(--line);
         }
+
+
+        .contact-box::after {
+
+            content: "✉";
+
+            position: absolute;
+
+            right: 45px;
+
+            top: 0;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 110px;
+
+            color:
+                rgba(255,255,255,.38);
+
+            transform:
+                rotate(8deg);
+        }
+
 
         .contact-box h3 {
-            font-size: 22px;
-            font-weight: 500;
-            margin: 0 0 7px;
+
+            position: relative;
+
+            z-index: 1;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 43px;
+
+            font-weight: normal;
+
+            margin:
+                0 0 8px;
         }
+
 
         .contact-box p {
-            color: #777;
-            font-size: 12px;
-            margin: 0;
+
+            position: relative;
+
+            z-index: 1;
+
             max-width: 600px;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            margin:
+                0 0 22px;
         }
+
 
         .email {
-            color: #668ba5;
-            border-bottom: 1px solid #668ba5;
-            font-size: 13px;
-            white-space: nowrap;
+
+            position: relative;
+
+            z-index: 1;
+
+            display: inline-block;
+
+            background:
+                var(--cream);
+
+            border:
+                2px solid var(--line);
+
+            padding:
+                10px 15px;
+
+            font-size: 12px;
+
+            transition:
+                .15s ease;
         }
+
 
         .email:hover {
-            color: #171717;
-            border-color: #171717;
+
+            background:
+                var(--blue);
+
+            color: white;
+
+            transform:
+                translateY(-2px);
         }
 
-        /* FOOTER */
+
+        /* =========================================
+           footer
+        ========================================= */
 
         footer {
-            border-top: 1px solid #c9c6bd;
-            margin-top: 100px;
-            padding-top: 20px;
+
+            border-top:
+                2px solid var(--line);
+
+            margin-top:
+                110px;
+
+            padding-top:
+                20px;
+
             display: flex;
-            justify-content: space-between;
-            color: #888;
+
+            justify-content:
+                space-between;
+
+            gap: 20px;
+
+            color:
+                var(--muted);
+
             font-size: 10px;
+
+            line-height: 1.7;
         }
 
-        footer a {
-            color: #668ba5;
-        }
 
-        /* MOBILE */
+        /* =========================================
+           mobile
+        ========================================= */
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             nav {
-                padding: 13px 18px;
+
+                padding:
+                    12px 17px;
             }
+
+
+            .logo {
+
+                font-size:
+                    22px;
+            }
+
 
             .nav-links {
-                gap: 12px;
+
+                gap:
+                    9px;
+
+                font-size:
+                    9px;
             }
+
 
             main {
-                padding: 50px 18px 70px;
+
+                padding:
+                    40px 17px 70px;
             }
+
+
+            .hero {
+
+                min-height:
+                    400px;
+
+                padding-top:
+                    30px;
+            }
+
 
             h1 {
-                font-size: 55px;
-                letter-spacing: -3px;
+
+                font-size:
+                    78px;
+
+                line-height:
+                    .76;
             }
+
+
+            .hero-star {
+
+                font-size:
+                    60px;
+
+                right:
+                    3%;
+
+                top:
+                    5px;
+            }
+
+
+            .hero-circle {
+
+                right:
+                    10%;
+
+                bottom:
+                    80px;
+
+                width:
+                    55px;
+
+                height:
+                    55px;
+            }
+
+
+            .hero-line {
+
+                width:
+                    130px;
+            }
+
 
             .archive-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
+
+            .archive-item {
+
+                min-height:
+                    185px;
+            }
+
+
+            .support-box,
             .contact-box {
-                grid-template-columns: 1fr;
+
+                padding:
+                    25px;
             }
 
-            .email {
-                white-space: normal;
-                display: inline-block;
+
+            .support-box h3,
+            .contact-box h3 {
+
+                font-size:
+                    34px;
             }
+
+
+            .support-box::after,
+            .contact-box::after {
+
+                font-size:
+                    75px;
+
+                right:
+                    10px;
+            }
+
 
             footer {
-                flex-direction: column;
-                gap: 8px;
+
+                flex-direction:
+                    column;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <nav>
-        <a href="#" class="logo">
-            alex g <span>/</span> unreleased
-        </a>
 
-        <div class="nav-links">
-            <a href="#unreleased">unreleased</a>
-            <a href="#support">support alex</a>
-            <a href="#live">live</a>
-            <a href="#contact">contact</a>
-        </div>
-    </nav>
-</header>
+    <!-- header -->
 
+    <header>
 
-<main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="eyebrow">unofficial fan archive</div>
-
-        <h1>alex g<br>unreleased</h1>
-
-        <p>
-            an archive documenting unreleased songs, albums,
-            compilations, demos, alternate versions, and live
-            recordings from throughout alex g's career
-        </p>
-
-    </section>
-
-
-    <!-- SEARCH -->
-
-    <div class="search">
-        <input
-            type="search"
-            placeholder="search the archive..."
-            aria-label="Search the archive"
-        >
-    </div>
-
-
-    <!-- UNRELEASED -->
-
-    <section class="section" id="unreleased">
-
-        <div class="section-heading">
-            <h2>Unreleased music</h2>
-            <span>archive / 01</span>
-        </div>
-
-        <div class="archive-grid">
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">01 / 04</div>
-                <div class="archive-arrow">→</div>
-                <h3>compilations</h3>
-                <p>
-                    collections and compilations of songs
-                    from different periods
-                </p>
-            </a>
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">02 / 04</div>
-                <div class="archive-arrow">→</div>
-                <h3>Unreleased albums</h3>
-                <p>
-                    albums and projects that never received
-                    an official release
-                </p>
-            </a>
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">03 / 04</div>
-                <div class="archive-arrow">→</div>
-                <h3>unreleased songs</h3>
-                <p>
-                    individual tracks and recordings outside
-                    of official releases.
-                </p>
-            </a>
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">04 / 04</div>
-                <div class="archive-arrow">→</div>
-                <h3>demos & versions</h3>
-                <p>
-                    demos, alternate versions, early recordings,
-                    and other variations
-                </p>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- SUPPORT -->
-
-    <section class="section" id="support">
-
-        <div class="section-heading">
-            <h2>support g-man!</h2>
-            <span>official releases</span>
-        </div>
-
-        <div class="support-box">
-
-            <h3>listen to the official music</h3>
-
-            <p>
-                this is an unofficial fan archive. if you enjoy
-                the music documented here, consider supporting
-                alex by listening to and purchasing his official
-                releases.
-            </p>
-
-            <div class="links">
-                <a href="#" class="link">website ↗</a>
-                <a href="#" class="link">bandcamp ↗</a>
-                <a href="#" class="link">spotify ↗</a>
-                <a href="#" class="link">apple music ↗</a>
-                <a href="#" class="link">merch ↗</a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- LIVE -->
-
-    <section class="section" id="live">
-
-        <div class="section-heading">
-            <h2>live</h2>
-            <span>archive / 02</span>
-        </div>
-
-        <div class="archive-grid">
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">01 / 02</div>
-                <div class="archive-arrow">→</div>
-                <h3>live recordings</h3>
-                <p>
-                    recordings and performances from shows
-                    throughout the years
-                </p>
-            </a>
-
-            <a href="#" class="archive-item">
-                <div class="archive-number">02 / 02</div>
-                <div class="archive-arrow">→</div>
-                <h3>shows & setlists</h3>
-                <p>
-                    shows, dates, and documented setlists
-                </p>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="section" id="contact">
-
-        <div class="section-heading">
-            <h2>contact</h2>
-            <span>get in touch</span>
-        </div>
-
-        <div class="contact-box">
-
-            <div>
-                <h3>have something to add?</h3>
-
-                <p>
-                    found an error, have information about a
-                    recording, or want to contribute something
-                    to the archive? shoot me an email!
-                </p>
-            </div>
+        <nav>
 
             <a
-                class="email"
-                href="mailto:lucija.f262@gmail.com"
+                href="#"
+                class="logo"
             >
-                lucija.f262@gmail.com ↗
+                alex g
+                <span class="slash">/</span>
+                unreleased
             </a>
 
+
+            <div class="nav-links">
+
+                <a href="#unreleased">
+                    unreleased
+                </a>
+
+                <a href="#support">
+                    support
+                </a>
+
+                <a href="#live">
+                    live
+                </a>
+
+                <a href="#contact">
+                    contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- main -->
+
+    <main>
+
+
+        <!-- hero -->
+
+        <section class="hero">
+
+            <div class="eyebrow">
+                unofficial fan archive
+            </div>
+
+
+            <div class="hero-star">
+                ✳
+            </div>
+
+
+            <div class="hero-circle"></div>
+
+
+            <div class="hero-line"></div>
+
+
+            <h1>
+                alex g<br>
+                unreleased
+            </h1>
+
+
+            <p class="hero-description">
+
+                a fan-made archive documenting unreleased
+                songs, albums, compilations, demos,
+                alternate versions, and live recordings
+                from throughout alex g's career.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- search -->
+
+        <div class="search">
+
+            <input
+                type="search"
+                placeholder="search the archive..."
+                aria-label="search the archive"
+            >
+
         </div>
 
-    </section>
 
 
-    <!-- FOOTER -->
+        <!-- unreleased music -->
 
-    <footer>
+        <section
+            class="section"
+            id="unreleased"
+        >
 
-        <div>
-            alexgunreleased.com · unofficial fan archive
-        </div>
 
-        <div>
-            not affiliated with Alex G, his management,
-            or his labels
-        </div>
+            <div class="section-heading">
 
-    </footer>
+                <h2>
+                    unreleased music
+                </h2>
 
-</main>
+                <span>
+                    archive / 01
+                </span>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <a
+                    href="#"
+                    class="archive-item"
+                >
+
+                    <div class="archive-number">
+                        01 / 04
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        compilations
+                    </h3>
+
+                    <p>
+                        collections and compilations of songs
+                        from different periods.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="archive-item"
+                >
+
+                    <div class="archive-number">
+                        02 / 04
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        unreleased albums
+                    </h3>
+
+                    <p>
+                        albums and projects that never received
+                        an official release.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="archive-item"
+                >
+
+                    <div class="archive-number">
+                        03 / 04
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        unreleased songs
+                    </h3>
+
+                    <p>
+                        individual tracks and recordings outside
+                        of official releases.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="archive-item"
+                >
+
+                    <div class="archive-number">
+                        04 / 04
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        demos & versions
+                    </h3>
+
+                    <p>
+                        demos, alternate versions, early recordings,
+                        and other variations.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- support -->
+
+        <section
+            class="section"
+            id="support"
+        >
+
+
+            <div class="section-heading">
+
+                <h2>
+                    support alex
+                </h2>
+
+                <span>
+                    official releases
+                </span>
+
+            </div>
+
+
+            <div class="support-box">
+
+                <h3>
+                    listen to the official music
+                </h3>
+
+
+                <p>
+
+                    this is an unofficial fan archive.
+                    if you enjoy the music documented here,
+                    consider supporting alex by listening to
+                    and purchasing his official releases.
+
+                </p>
+
+
+                <div class="links">
+
+                    <a
+                        href="#"
+                        class="link"
+                    >
+                        website ↗
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="link"
+                    >
+                        bandcamp ↗
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="link"
+                    >
+                        spotify ↗
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="link"
+                    >
+                        apple music ↗
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="link"
+                    >
+                        merch ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- live -->
+
+        <section
+            class="section"
+            id="live"
+        >
+
+
+            <div class="section-heading">
+
+                <h2>
+                    live
+                </h2>
+
+                <span>
+                    archive / 02
+                </span>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <a
+                    href="#"
+                    class="archive-item live-card"
+                >
+
+                    <div class="archive-number">
+                        01 / 02
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        live recordings
+                    </h3>
+
+                    <p>
+                        recordings and performances from
+                        shows throughout the years.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="archive-item live-card"
+                >
+
+                    <div class="archive-number">
+                        02 / 02
+                    </div>
+
+                    <div class="archive-arrow">
+                        →
+                    </div>
+
+                    <h3>
+                        shows & setlists
+                    </h3>
+
+                    <p>
+                        shows, dates, venues, and documented
+                        setlists.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- contact -->
+
+        <section
+            class="section"
+            id="contact"
+        >
+
+
+            <div class="section-heading">
+
+                <h2>
+                    contact
+                </h2>
+
+                <span>
+                    get in touch
+                </span>
+
+            </div>
+
+
+            <div class="contact-box">
+
+
+                <h3>
+                    got something to add?
+                </h3>
+
+
+                <p>
+
+                    found an error, have information about
+                    a recording, or want to contribute
+                    something to the archive?
+                    send me an email :)
+
+                </p>
+
+
+                <a
+                    class="email"
+                    href="mailto:lucija.f262@gmail.com"
+                >
+                    lucija.f262@gmail.com ↗
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- footer -->
+
+        <footer>
+
+            <div>
+                alexgunreleased.com
+                · unofficial fan archive
+            </div>
+
+
+            <div>
+                not affiliated with alex g,
+                his management, or his labels
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+</body>
+
+</html>
