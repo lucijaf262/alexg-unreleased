@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>alex g unreleased archive</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #111;
+            color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 30px 40px;
+            border-bottom: 1px solid #333;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 30px;
+        }
+
+        h1 {
+            font-size: 56px;
+            margin: 0 0 15px;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            color: #999;
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .search {
+            width: 100%;
+            padding: 18px;
+            background: #1c1c1c;
+            border: 1px solid #444;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .section {
+            border: 1px solid #333;
+            padding: 30px;
+            min-height: 200px;
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .section:hover {
+            background: #1d1d1d;
+            border-color: #666;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .section p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        footer {
+            border-top: 1px solid #333;
+            padding: 30px 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                padding: 50px 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .sections {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="/">ALEX G UNRELEASED</a>
+</header>
+
+<main>
+
+    <h1>alex g<br>unreleased archive</h1>
+
+    <div class="subtitle">
+        a fan-made archive documenting unreleased material
+    </div>
+
+    <input
+        class="search"
+        type="text"
+        placeholder="search the archive..."
+    >
+
+    <div class="sections">
+
+        <a class="section" href="#">
+            <h2>unreleased music</h2>
+            <p>
+                unreleased albums, compilations,
+                songs, demos, and alternate versions
+            </p>
+        </a>
+
+        <a class="section" href="#">
+            <h2>support alex</h2>
+            <p>
+                listen to alex g's officially released music
+            </p>
+        </a>
+
+        <a class="section" href="#">
+            <h2>live</h2>
+            <p>
+                live recordings, shows, setlists,
+                and other live material
+            </p>
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    this is an unofficial fan-made archive and is not affiliated with Alex G
+    or his management
+</footer>
+
+</body>
+</html>
