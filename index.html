@@ -1,172 +1,443 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>alex g unreleased</title>
+<meta name="description" content="A fan-made archive of Alex G's unreleased music, compilations, albums, songs, demos, and live material.">
 
-    <title>alex g unreleased archive</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Patrick+Hand&display=swap');
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            background: #111;
-            color: #eee;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    body {
+        margin: 0;
+        background: #f5f0df;
+        color: #171717;
+        font-family: "DM Mono", monospace;
+        min-height: 100vh;
+    }
 
-        header {
-            padding: 30px 40px;
-            border-bottom: 1px solid #333;
-        }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        header a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    /* little top bar */
+
+    .top {
+        border-bottom: 2px solid #171717;
+        padding: 13px 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .top-left {
+        color: #777;
+    }
+
+    .heart {
+        color: #e84a5f;
+    }
+
+    /* main */
+
+    main {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 55px 25px 80px;
+    }
+
+    .hero {
+        position: relative;
+        margin-bottom: 55px;
+    }
+
+    h1 {
+        font-family: "Patrick Hand", cursive;
+        font-size: clamp(64px, 12vw, 135px);
+        font-weight: 400;
+        line-height: .72;
+        letter-spacing: -4px;
+        margin: 0;
+        transform: rotate(-2deg);
+    }
+
+    .hero-sub {
+        margin-top: 35px;
+        margin-left: 8px;
+        font-size: 13px;
+        max-width: 470px;
+        line-height: 1.8;
+    }
+
+    .star {
+        position: absolute;
+        right: 8%;
+        top: 5px;
+        font-family: "Patrick Hand", cursive;
+        font-size: 72px;
+        color: #efb52f;
+        transform: rotate(12deg);
+    }
+
+    /* search */
+
+    .search-wrap {
+        margin: 45px 0;
+    }
+
+    .search {
+        width: 100%;
+        padding: 18px 20px;
+        border: 2px solid #171717;
+        border-radius: 5px;
+        background: #fffdf4;
+        color: #171717;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+        box-shadow: 5px 5px 0 #171717;
+    }
+
+    .search:focus {
+        box-shadow: 7px 7px 0 #e84a5f;
+    }
+
+    /* section title */
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 70px 0 25px;
+    }
+
+    .section-title h2 {
+        font-family: "Patrick Hand", cursive;
+        font-size: 37px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .section-title span {
+        color: #e84a5f;
+        font-size: 18px;
+    }
+
+    /* cards */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .card {
+        min-height: 190px;
+        padding: 25px;
+        border: 2px solid #171717;
+        border-radius: 4px;
+        position: relative;
+        transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .card:hover {
+        transform: translate(-3px, -3px) rotate(-.5deg);
+    }
+
+    .card:nth-child(1) {
+        background: #a9dff0;
+        box-shadow: 7px 7px 0 #171717;
+    }
+
+    .card:nth-child(2) {
+        background: #f4c7d8;
+        box-shadow: 7px 7px 0 #171717;
+    }
+
+    .card:nth-child(3) {
+        background: #f5d76e;
+        box-shadow: 7px 7px 0 #171717;
+    }
+
+    .card:nth-child(4) {
+        background: #b9d9a9;
+        box-shadow: 7px 7px 0 #171717;
+    }
+
+    .card h3 {
+        font-family: "Patrick Hand", cursive;
+        font-size: 32px;
+        font-weight: 400;
+        margin: 0 0 10px;
+    }
+
+    .card p {
+        font-size: 12px;
+        line-height: 1.7;
+        max-width: 350px;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        font-size: 25px;
+    }
+
+    /* support */
+
+    .support {
+        border: 2px solid #171717;
+        background: #fffdf4;
+        padding: 28px;
+        margin-top: 25px;
+        box-shadow: 7px 7px 0 #e84a5f;
+    }
+
+    .support h3 {
+        font-family: "Patrick Hand", cursive;
+        font-size: 34px;
+        font-weight: 400;
+        margin: 0 0 8px;
+    }
+
+    .support p {
+        font-size: 12px;
+        line-height: 1.8;
+        max-width: 600px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .button {
+        border: 2px solid #171717;
+        padding: 9px 14px;
+        background: #f5f0df;
+        font-size: 11px;
+        transition: .15s;
+    }
+
+    .button:hover {
+        background: #171717;
+        color: #fffdf4;
+    }
+
+    /* footer */
+
+    footer {
+        border-top: 2px solid #171717;
+        margin-top: 90px;
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 10px;
+        color: #777;
+        line-height: 1.6;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    @media (max-width: 650px) {
 
         main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 80px 30px;
+            padding: 45px 18px 60px;
         }
 
         h1 {
-            font-size: 56px;
-            margin: 0 0 15px;
-            letter-spacing: -2px;
+            font-size: 72px;
         }
 
-        .subtitle {
-            color: #999;
-            font-size: 18px;
-            margin-bottom: 60px;
+        .star {
+            right: 2%;
+            top: -20px;
+            font-size: 50px;
         }
 
-        .search {
-            width: 100%;
-            padding: 18px;
-            background: #1c1c1c;
-            border: 1px solid #444;
-            color: white;
-            font-size: 16px;
-            margin-bottom: 60px;
+        .cards {
+            grid-template-columns: 1fr;
         }
 
-        .sections {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .section {
-            border: 1px solid #333;
-            padding: 30px;
-            min-height: 200px;
-            text-decoration: none;
-            color: white;
-            transition: 0.2s;
-        }
-
-        .section:hover {
-            background: #1d1d1d;
-            border-color: #666;
-        }
-
-        .section h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        .section p {
-            color: #999;
-            line-height: 1.6;
+        .card {
+            min-height: 165px;
         }
 
         footer {
-            border-top: 1px solid #333;
-            padding: 30px 40px;
-            color: #777;
-            font-size: 14px;
+            flex-direction: column;
         }
 
-        @media (max-width: 700px) {
-            main {
-                padding: 50px 20px;
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            .sections {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                padding: 25px 20px;
-            }
+        .footer-right {
+            text-align: left;
         }
-    </style>
-</head>
+    }
+</style>
 
-<body>
-
-<header>
-    <a href="/">ALEX G UNRELEASED</a>
-</header>
+</head> <body>
+<div class="top">
+    <div class="top-left">alexgunreleased.com</div>
+    <div>made by fans <span class="heart">♥</span></div>
+</div>
 
 <main>
 
-    <h1>alex g<br>unreleased archive</h1>
+    <section class="hero">
 
-    <div class="subtitle">
-        a fan-made archive documenting unreleased material
+        <div class="star">✳</div>
+
+        <h1>
+            alex g<br>
+            unreleased
+        </h1>
+
+        <div class="hero-sub">
+            a fan-made archive for the songs, albums,
+            compilations, demos, and other things that
+            never quite made it out into the world.
+        </div>
+
+    </section>
+
+
+    <div class="search-wrap">
+        <input
+            class="search"
+            type="text"
+            placeholder="what are you looking for?"
+            aria-label="Search the archive"
+        >
     </div>
 
-    <input
-        class="search"
-        type="text"
-        placeholder="search the archive..."
-    >
 
-    <div class="sections">
+    <div class="section-title">
+        <span>★</span>
+        <h2>unreleased music</h2>
+        <span>★</span>
+    </div>
 
-        <a class="section" href="#">
-            <h2>unreleased music</h2>
+
+    <div class="cards">
+
+        <a href="#" class="card">
+            <h3>compilations</h3>
             <p>
-                unreleased albums, compilations,
-                songs, demos, and alternate versions
+                Collections, compilations, and other
+                groups of songs from throughout the years.
             </p>
+            <div class="arrow">→</div>
         </a>
 
-        <a class="section" href="#">
-            <h2>support alex</h2>
+        <a href="#" class="card">
+            <h3>unreleased albums</h3>
             <p>
-                listen to alex g's officially released music
+                Albums and projects that never received
+                an official release.
             </p>
+            <div class="arrow">→</div>
         </a>
 
-        <a class="section" href="#">
-            <h2>live</h2>
+        <a href="#" class="card">
+            <h3>unreleased songs</h3>
             <p>
-                live recordings, shows, setlists,
-                and other live material
+                Individual songs, recordings, and tracks
+                that aren't part of an official release.
             </p>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="#" class="card">
+            <h3>demos & versions</h3>
+            <p>
+                Demos, alternate versions, early recordings,
+                and other variations.
+            </p>
+            <div class="arrow">→</div>
         </a>
 
     </div>
+
+
+    <div class="section-title">
+        <span>♡</span>
+        <h2>support alex</h2>
+        <span>♡</span>
+    </div>
+
+
+    <div class="support">
+
+        <h3>listen to the real thing :)</h3>
+
+        <p>
+            This archive is made by fans. If you like what
+            you hear about here, support Alex by listening
+            to and buying his officially released music.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="button">official website ↗</a>
+            <a href="#" class="button">bandcamp ↗</a>
+            <a href="#" class="button">spotify ↗</a>
+            <a href="#" class="button">apple music ↗</a>
+            <a href="#" class="button">merch ↗</a>
+        </div>
+
+    </div>
+
+
+    <div class="section-title">
+        <span>☼</span>
+        <h2>live</h2>
+        <span>☼</span>
+    </div>
+
+
+    <div class="cards">
+
+        <a href="#" class="card">
+            <h3>live recordings</h3>
+            <p>
+                Performances and recordings from shows
+                throughout the years.
+            </p>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="#" class="card">
+            <h3>shows & setlists</h3>
+            <p>
+                A growing record of shows, dates,
+                venues, and setlists.
+            </p>
+            <div class="arrow">→</div>
+        </a>
+
+    </div>
+
+
+    <footer>
+
+        <div>
+            alexgunreleased.com<br>
+            unofficial fan archive
+        </div>
+
+        <div class="footer-right">
+            not affiliated with alex g<br>
+            or his management / labels
+        </div>
+
+    </footer>
 
 </main>
 
-<footer>
-    this is an unofficial fan-made archive and is not affiliated with Alex G
-    or his management
-</footer>
-
-</body>
-</html>
+</body> </html>>
