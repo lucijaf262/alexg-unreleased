@@ -17,63 +17,55 @@
         content="an unofficial fan archive of alex g's unreleased music, fan compilations, side projects, live history, and more."
     >
 
-
     <style>
 
-        /* ==============================
-           custom font
-        ============================== */
-
-        @font-face {
-
-            font-family: "make fun of me";
-
-            src: url("fonts/makefunofmeDEMO.otf")
-                 format("opentype");
-
-            font-weight: normal;
-
-            font-style: normal;
-        }
-
-
-        /* ==============================
+        /* =========================
            colors
-        ============================== */
+        ========================= */
 
         :root {
 
             --cream: #fff8e8;
 
-            --cream-dark: #f3ecd9;
-
             --blue: #5e658a;
-
-            --blue-dark: #484e70;
-
-            --blue-light: #dfe2ef;
-
-            --black: #19191c;
-
-            --gray: #707078;
-
-            --white: #fffdf7;
 
         }
 
 
-        /* ==============================
+        /* =========================
+           custom font
+        ========================= */
+
+        @font-face {
+
+            font-family: "make fun of me";
+
+            src:
+                url("fonts/makefunofmeDEMO.otf")
+                format("opentype");
+
+            font-weight: normal;
+
+            font-style: normal;
+
+        }
+
+
+        /* =========================
            reset
-        ============================== */
+        ========================= */
 
         * {
+
             box-sizing: border-box;
+
         }
 
 
         html {
 
             scroll-behavior: smooth;
+
         }
 
 
@@ -83,7 +75,7 @@
 
             background: var(--cream);
 
-            color: var(--black);
+            color: var(--blue);
 
             font-family:
                 Arial,
@@ -93,6 +85,7 @@
             font-size: 14px;
 
             line-height: 1.6;
+
         }
 
 
@@ -101,19 +94,13 @@
             color: inherit;
 
             text-decoration: none;
+
         }
 
 
-        button,
-        input {
-
-            font-family: inherit;
-        }
-
-
-        /* ==============================
+        /* =========================
            header
-        ============================== */
+        ========================= */
 
         header {
 
@@ -123,14 +110,11 @@
 
             z-index: 100;
 
-            background:
-                rgba(255, 248, 232, .94);
-
-            backdrop-filter:
-                blur(8px);
+            background: var(--cream);
 
             border-bottom:
-                1px solid var(--black);
+                2px solid var(--blue);
+
         }
 
 
@@ -140,8 +124,7 @@
 
             margin: 0 auto;
 
-            padding:
-                15px 28px;
+            padding: 18px 28px;
 
             display: flex;
 
@@ -149,7 +132,8 @@
 
             justify-content: space-between;
 
-            gap: 30px;
+            gap: 25px;
+
         }
 
 
@@ -159,17 +143,14 @@
                 "make fun of me",
                 sans-serif;
 
-            font-size: 27px;
+            font-size: 29px;
 
             line-height: 1;
 
-            white-space: nowrap;
-        }
-
-
-        .logo-mark {
-
             color: var(--blue);
+
+            white-space: nowrap;
+
         }
 
 
@@ -177,34 +158,37 @@
 
             display: flex;
 
-            align-items: center;
-
             gap: 24px;
 
             font-size: 10px;
 
-            text-transform: lowercase;
+            text-transform: uppercase;
 
             letter-spacing: 1px;
+
         }
 
 
         .nav-links a {
 
+            color: var(--blue);
+
             transition:
-                color .15s ease;
+                opacity .15s ease;
+
         }
 
 
         .nav-links a:hover {
 
-            color: var(--blue);
+            opacity: .6;
+
         }
 
 
-        /* ==============================
+        /* =========================
            main
-        ============================== */
+        ========================= */
 
         main {
 
@@ -214,12 +198,13 @@
 
             padding:
                 0 28px 100px;
+
         }
 
 
-        /* ==============================
+        /* =========================
            hero
-        ============================== */
+        ========================= */
 
         .hero {
 
@@ -234,30 +219,28 @@
             justify-content: center;
 
             padding:
-                90px 0 100px;
+                100px 0;
 
             border-bottom:
-                1px solid var(--black);
+                2px solid var(--blue);
 
             overflow: hidden;
+
         }
 
 
         .eyebrow {
 
-            position: relative;
-
-            z-index: 3;
-
-            margin-bottom: 25px;
-
-            color: var(--blue);
+            margin-bottom: 28px;
 
             font-size: 10px;
 
             text-transform: uppercase;
 
             letter-spacing: 2px;
+
+            color: var(--blue);
+
         }
 
 
@@ -265,7 +248,7 @@
 
             position: relative;
 
-            z-index: 3;
+            z-index: 2;
 
             margin: 0;
 
@@ -280,115 +263,118 @@
 
             font-weight: normal;
 
-            line-height: .7;
+            line-height: .68;
 
-            letter-spacing: 1px;
+            color: var(--blue);
+
         }
 
 
         .hero-description {
 
-            position: relative;
+            max-width: 560px;
 
-            z-index: 3;
-
-            max-width: 550px;
-
-            margin-top: 60px;
-
-            color: var(--gray);
+            margin-top: 65px;
 
             font-size: 13px;
 
             line-height: 1.9;
+
+            color: var(--blue);
+
         }
 
 
-        .hero-circle {
+        /* decorative shapes */
+
+
+        .circle {
 
             position: absolute;
-
-            z-index: 1;
-
-            width: 300px;
-
-            height: 300px;
 
             right: 5%;
 
-            top: 105px;
+            top: 90px;
 
-            border-radius: 50%;
+            width: 280px;
 
-            background: var(--blue-light);
-        }
-
-
-        .hero-circle::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 115px;
-
-            height: 115px;
-
-            right: -30px;
-
-            bottom: 20px;
+            height: 280px;
 
             border-radius: 50%;
 
             background: var(--blue);
+
+            opacity: .15;
+
         }
 
 
-        .hero-star {
+        .circle-small {
 
             position: absolute;
 
-            z-index: 4;
+            right: 8%;
 
-            right: 13%;
+            top: 135px;
 
-            top: 105px;
+            width: 95px;
 
-            color: var(--blue);
+            height: 95px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+        }
+
+
+        .star {
+
+            position: absolute;
+
+            right: 14%;
+
+            top: 80px;
+
+            z-index: 2;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 100px;
+            font-size: 95px;
+
+            color: var(--blue);
 
             transform:
                 rotate(10deg);
+
         }
 
 
-        .hero-line {
+        .shape-line {
 
             position: absolute;
 
-            right: -10px;
+            right: -20px;
 
             bottom: 70px;
 
-            width: 260px;
+            width: 280px;
 
             height: 15px;
 
             background: var(--blue);
 
             transform:
-                rotate(-3deg);
+                rotate(-4deg);
+
         }
 
 
-        /* ==============================
+        /* =========================
            quick info
-        ============================== */
+        ========================= */
 
         .quick-info {
 
@@ -398,23 +384,25 @@
                 repeat(3, 1fr);
 
             border-bottom:
-                1px solid var(--black);
+                2px solid var(--blue);
+
         }
 
 
         .quick-item {
 
-            padding:
-                22px 20px;
+            padding: 24px 20px;
 
             border-right:
-                1px solid var(--black);
+                2px solid var(--blue);
+
         }
 
 
         .quick-item:last-child {
 
             border-right: none;
+
         }
 
 
@@ -424,29 +412,34 @@
 
             margin-bottom: 5px;
 
-            color: var(--blue);
-
             font-size: 10px;
 
             letter-spacing: 1px;
+
         }
 
 
-        .quick-item span:last-child {
+        .quick-text {
 
-            font-size: 11px;
+            font-family:
+                "make fun of me",
+                sans-serif;
 
-            color: var(--gray);
+            font-size: 24px;
+
+            color: var(--blue);
+
         }
 
 
-        /* ==============================
+        /* =========================
            sections
-        ============================== */
+        ========================= */
 
         .section {
 
             margin-top: 100px;
+
         }
 
 
@@ -465,7 +458,8 @@
             padding-bottom: 12px;
 
             border-bottom:
-                2px solid var(--black);
+                2px solid var(--blue);
+
         }
 
 
@@ -477,29 +471,33 @@
                 "make fun of me",
                 sans-serif;
 
-            font-size: 47px;
+            font-size: 48px;
 
             font-weight: normal;
 
             line-height: 1;
+
+            color: var(--blue);
+
         }
 
 
         .section-number {
-
-            color: var(--blue);
 
             font-size: 10px;
 
             text-transform: uppercase;
 
             letter-spacing: 1px;
+
+            color: var(--blue);
+
         }
 
 
-        /* ==============================
+        /* =========================
            archive cards
-        ============================== */
+        ========================= */
 
         .archive-grid {
 
@@ -509,6 +507,7 @@
                 repeat(2, 1fr);
 
             gap: 15px;
+
         }
 
 
@@ -516,30 +515,42 @@
 
             position: relative;
 
-            min-height: 245px;
+            min-height: 250px;
 
-            padding: 28px;
+            padding: 30px;
 
-            background: var(--cream-dark);
+            background: var(--cream);
 
             border:
-                1px solid var(--black);
+                2px solid var(--blue);
 
             transition:
-                transform .15s ease,
-                background .15s ease,
-                color .15s ease;
+                background .2s ease,
+                color .2s ease,
+                transform .2s ease;
+
         }
 
 
         .archive-card:hover {
 
+            background: var(--blue);
+
+            color: var(--cream);
+
             transform:
                 translateY(-5px);
 
-            background: var(--blue);
+        }
 
-            color: var(--white);
+
+        .archive-card:hover h3,
+        .archive-card:hover p,
+        .archive-card:hover .card-number,
+        .archive-card:hover .card-arrow {
+
+            color: var(--cream);
+
         }
 
 
@@ -547,19 +558,12 @@
 
             margin-bottom: 48px;
 
-            color: var(--blue);
-
             font-size: 10px;
 
             letter-spacing: 1px;
-        }
 
+            color: var(--blue);
 
-        .archive-card:hover
-        .card-number {
-
-            color:
-                rgba(255,255,255,.65);
         }
 
 
@@ -568,38 +572,33 @@
             margin:
                 0 0 12px;
 
-            max-width: 450px;
-
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 40px;
+            font-size: 41px;
 
             font-weight: normal;
 
             line-height: .9;
+
+            color: var(--blue);
+
         }
 
 
         .archive-card p {
 
-            max-width: 430px;
+            max-width: 450px;
 
             margin: 0;
-
-            color: var(--gray);
 
             font-size: 12px;
 
             line-height: 1.8;
-        }
 
+            color: var(--blue);
 
-        .archive-card:hover p {
-
-            color:
-                rgba(255,255,255,.78);
         }
 
 
@@ -609,26 +608,20 @@
 
             right: 20px;
 
-            bottom: 14px;
+            bottom: 13px;
+
+            font-size: 25px;
 
             color: var(--blue);
 
-            font-size: 24px;
         }
 
 
-        .archive-card:hover
-        .card-arrow {
+        /* =========================
+           information
+        ========================= */
 
-            color: var(--white);
-        }
-
-
-        /* ==============================
-           archive details
-        ============================== */
-
-        .archive-details {
+        .info-grid {
 
             display: grid;
 
@@ -636,149 +629,30 @@
                 1fr 1fr;
 
             gap: 15px;
+
         }
 
 
-        .detail-box {
+        .info-box {
 
-            padding: 30px;
+            padding: 35px;
 
             border:
-                1px solid var(--black);
+                2px solid var(--blue);
 
-            background:
-                var(--white);
         }
 
 
-        .detail-box.blue {
-
-            background:
-                var(--blue);
-
-            color:
-                var(--white);
-        }
-
-
-        .detail-box h3 {
-
-            margin:
-                0 0 12px;
-
-            font-family:
-                "make fun of me",
-                sans-serif;
-
-            font-size: 34px;
-
-            font-weight: normal;
-
-            line-height: .95;
-        }
-
-
-        .detail-box p {
-
-            margin: 0;
-
-            max-width: 500px;
-
-            color: var(--gray);
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-
-        .detail-box.blue p {
-
-            color:
-                rgba(255,255,255,.78);
-        }
-
-
-        /* ==============================
-           live history
-        ============================== */
-
-        .live-layout {
-
-            display: grid;
-
-            grid-template-columns:
-                1.35fr .65fr;
-
-            gap: 15px;
-        }
-
-
-        .live-main {
-
-            min-height: 310px;
-
-            padding: 32px;
+        .info-box.filled {
 
             background: var(--blue);
 
-            color: var(--white);
+            color: var(--cream);
 
-            border:
-                1px solid var(--black);
-
-            box-shadow:
-                7px 7px 0 var(--black);
         }
 
 
-        .live-main h3 {
-
-            margin:
-                0 0 18px;
-
-            font-family:
-                "make fun of me",
-                sans-serif;
-
-            font-size: 53px;
-
-            font-weight: normal;
-
-            line-height: .9;
-        }
-
-
-        .live-main p {
-
-            max-width: 600px;
-
-            margin: 0 0 12px;
-
-            color:
-                rgba(255,255,255,.78);
-
-            font-size: 12px;
-
-            line-height: 1.8;
-        }
-
-
-        .live-side {
-
-            min-height: 310px;
-
-            padding: 32px;
-
-            background:
-                var(--blue-light);
-
-            border:
-                1px solid var(--black);
-        }
-
-
-        .live-side h3 {
+        .info-box h3 {
 
             margin:
                 0 0 15px;
@@ -787,11 +661,142 @@
                 "make fun of me",
                 sans-serif;
 
-            font-size: 35px;
+            font-size: 38px;
 
             font-weight: normal;
 
             line-height: .9;
+
+            color: var(--blue);
+
+        }
+
+
+        .info-box.filled h3 {
+
+            color: var(--cream);
+
+        }
+
+
+        .info-box p {
+
+            margin: 0;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            color: var(--blue);
+
+        }
+
+
+        .info-box.filled p {
+
+            color: var(--cream);
+
+        }
+
+
+        /* =========================
+           live
+        ========================= */
+
+        .live-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr .6fr;
+
+            gap: 15px;
+
+        }
+
+
+        .live-main {
+
+            min-height: 320px;
+
+            padding: 35px;
+
+            background: var(--blue);
+
+            border:
+                2px solid var(--blue);
+
+            color: var(--cream);
+
+        }
+
+
+        .live-main h3 {
+
+            margin:
+                0 0 20px;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 55px;
+
+            font-weight: normal;
+
+            line-height: .85;
+
+            color: var(--cream);
+
+        }
+
+
+        .live-main p {
+
+            max-width: 600px;
+
+            margin: 0;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            color: var(--cream);
+
+        }
+
+
+        .live-side {
+
+            min-height: 320px;
+
+            padding: 35px;
+
+            border:
+                2px solid var(--blue);
+
+            color: var(--blue);
+
+        }
+
+
+        .live-side h3 {
+
+            margin:
+                0 0 18px;
+
+            font-family:
+                "make fun of me",
+                sans-serif;
+
+            font-size: 38px;
+
+            font-weight: normal;
+
+            line-height: .9;
+
+            color: var(--blue);
+
         }
 
 
@@ -799,47 +804,46 @@
 
             margin: 0;
 
-            color: var(--gray);
-
             font-size: 12px;
 
-            line-height: 1.8;
+            line-height: 1.9;
+
+            color: var(--blue);
+
         }
 
 
-        /* ==============================
+        /* =========================
            support
-        ============================== */
+        ========================= */
 
         .support-box {
 
             padding: 40px;
 
-            background:
-                var(--blue-light);
-
             border:
-                1px solid var(--black);
+                2px solid var(--blue);
 
-            box-shadow:
-                7px 7px 0 var(--blue);
         }
 
 
         .support-box h3 {
 
             margin:
-                0 0 12px;
+                0 0 15px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 48px;
+            font-size: 52px;
 
             font-weight: normal;
 
-            line-height: .9;
+            line-height: .85;
+
+            color: var(--blue);
+
         }
 
 
@@ -850,11 +854,12 @@
             margin:
                 0 0 25px;
 
-            color: var(--gray);
-
             font-size: 12px;
 
             line-height: 1.9;
+
+            color: var(--blue);
+
         }
 
 
@@ -864,20 +869,22 @@
 
             flex-wrap: wrap;
 
-            gap: 9px;
+            gap: 10px;
+
         }
 
 
         .support-link {
 
             padding:
-                10px 14px;
-
-            background:
-                var(--cream);
+                10px 15px;
 
             border:
-                1px solid var(--black);
+                2px solid var(--blue);
+
+            background: var(--cream);
+
+            color: var(--blue);
 
             font-size: 10px;
 
@@ -886,24 +893,24 @@
             letter-spacing: .5px;
 
             transition:
-                background .15s ease,
-                color .15s ease;
+                background .2s ease,
+                color .2s ease;
+
         }
 
 
         .support-link:hover {
 
-            background:
-                var(--blue);
+            background: var(--blue);
 
-            color:
-                var(--white);
+            color: var(--cream);
+
         }
 
 
-        /* ==============================
+        /* =========================
            contact
-        ============================== */
+        ========================= */
 
         .contact-box {
 
@@ -913,7 +920,8 @@
                 1fr 1fr;
 
             border:
-                1px solid var(--black);
+                2px solid var(--blue);
+
         }
 
 
@@ -921,25 +929,26 @@
 
             padding: 40px;
 
-            background:
-                var(--cream-dark);
         }
 
 
         .contact-text h3 {
 
             margin:
-                0 0 12px;
+                0 0 15px;
 
             font-family:
                 "make fun of me",
                 sans-serif;
 
-            font-size: 48px;
+            font-size: 52px;
 
             font-weight: normal;
 
-            line-height: .9;
+            line-height: .85;
+
+            color: var(--blue);
+
         }
 
 
@@ -949,11 +958,12 @@
 
             margin: 0;
 
-            color: var(--gray);
-
             font-size: 12px;
 
-            line-height: 1.8;
+            line-height: 1.9;
+
+            color: var(--blue);
+
         }
 
 
@@ -965,49 +975,46 @@
 
             padding: 40px;
 
-            background:
-                var(--blue);
+            background: var(--blue);
 
-            color:
-                var(--white);
         }
 
 
         .email-link {
 
             padding:
-                12px 16px;
+                13px 17px;
 
             border:
-                1px solid var(--white);
+                2px solid var(--cream);
+
+            color: var(--cream);
 
             font-size: 12px;
 
             transition:
-                background .15s ease,
-                color .15s ease;
+                background .2s ease,
+                color .2s ease;
+
         }
 
 
         .email-link:hover {
 
-            background:
-                var(--white);
+            background: var(--cream);
 
-            color:
-                var(--blue);
+            color: var(--blue);
+
         }
 
 
-        /* ==============================
+        /* =========================
            footer
-        ============================== */
+        ========================= */
 
         footer {
 
             display: flex;
-
-            align-items: flex-start;
 
             justify-content:
                 space-between;
@@ -1019,21 +1026,22 @@
             padding-top: 20px;
 
             border-top:
-                1px solid var(--black);
-
-            color: var(--gray);
+                2px solid var(--blue);
 
             font-size: 9px;
 
             text-transform: uppercase;
 
             letter-spacing: .5px;
+
+            color: var(--blue);
+
         }
 
 
-        /* ==============================
+        /* =========================
            mobile
-        ============================== */
+        ========================= */
 
         @media (max-width: 720px) {
 
@@ -1041,13 +1049,15 @@
             nav {
 
                 padding:
-                    14px 17px;
+                    15px 17px;
+
             }
 
 
             .logo {
 
                 font-size: 21px;
+
             }
 
 
@@ -1056,32 +1066,36 @@
                 gap: 10px;
 
                 font-size: 8px;
+
             }
 
 
             main {
 
                 padding:
-                    45px 17px 70px;
+                    0 17px 70px;
+
             }
 
 
             .hero {
 
-                min-height: 470px;
+                min-height: 480px;
 
                 padding:
                     70px 0;
+
             }
 
 
             .hero h1 {
 
                 font-size: 78px;
+
             }
 
 
-            .hero-circle {
+            .circle {
 
                 width: 190px;
 
@@ -1090,41 +1104,47 @@
                 right: -30px;
 
                 top: 100px;
+
             }
 
 
-            .hero-circle::after {
+            .circle-small {
 
-                width: 75px;
+                width: 65px;
 
-                height: 75px;
+                height: 65px;
 
-                right: -15px;
+                right: 5%;
+
+                top: 140px;
+
             }
 
 
-            .hero-star {
+            .star {
 
-                right: 7%;
+                right: 8%;
 
-                top: 80px;
+                top: 85px;
 
                 font-size: 60px;
+
             }
 
 
-            .hero-line {
+            .shape-line {
 
-                width: 150px;
+                width: 160px;
 
                 bottom: 50px;
+
             }
 
 
             .quick-info {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
+
             }
 
 
@@ -1133,83 +1153,86 @@
                 border-right: none;
 
                 border-bottom:
-                    1px solid var(--black);
+                    2px solid var(--blue);
+
             }
 
 
             .quick-item:last-child {
 
                 border-bottom: none;
+
             }
 
 
             .archive-grid {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
+
             }
 
 
             .archive-card {
 
-                min-height: 205px;
+                min-height: 210px;
+
             }
 
 
-            .archive-details {
+            .info-grid {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
+
             }
 
 
-            .live-layout {
+            .live-grid {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
+
             }
 
 
             .support-box {
 
-                padding:
-                    28px;
+                padding: 28px;
+
             }
 
 
             .support-box h3 {
 
-                font-size:
-                    37px;
+                font-size: 39px;
+
             }
 
 
             .contact-box {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
+
             }
 
 
             .contact-text,
             .contact-email {
 
-                padding:
-                    28px;
+                padding: 28px;
+
             }
 
 
             .contact-text h3 {
 
-                font-size:
-                    39px;
+                font-size: 40px;
+
             }
 
 
             footer {
 
-                flex-direction:
-                    column;
+                flex-direction: column;
+
             }
 
         }
@@ -1222,9 +1245,9 @@
 <body>
 
 
-    <!-- ==============================
+    <!-- =========================
          navigation
-    ============================== -->
+    ========================== -->
 
     <header>
 
@@ -1236,13 +1259,7 @@
                 class="logo"
             >
 
-                alex g
-
-                <span class="logo-mark">
-                    /
-                </span>
-
-                unreleased
+                alex g / unreleased
 
             </a>
 
@@ -1274,9 +1291,9 @@
 
 
 
-    <!-- ==============================
-         main content
-    ============================== -->
+    <!-- =========================
+         main
+    ========================== -->
 
     <main>
 
@@ -1291,15 +1308,15 @@
             </div>
 
 
-            <div class="hero-circle"></div>
+            <div class="circle"></div>
 
+            <div class="circle-small"></div>
 
-            <div class="hero-star">
+            <div class="star">
                 ✳
             </div>
 
-
-            <div class="hero-line"></div>
+            <div class="shape-line"></div>
 
 
             <h1>
@@ -1313,10 +1330,10 @@
 
             <p class="hero-description">
 
-                an archive documenting fan compilations,
-                unreleased albums, side projects, live history,
-                demos, alternate versions, and other recordings
-                from throughout alex g's career.
+                an archive for unreleased music,
+                fan compilations, unreleased albums,
+                side projects, live history, and
+                recordings from throughout alex g's career.
 
             </p>
 
@@ -1325,7 +1342,7 @@
 
 
 
-        <!-- quick information -->
+        <!-- quick info -->
 
         <div class="quick-info">
 
@@ -1336,7 +1353,7 @@
                     01
                 </span>
 
-                <span>
+                <span class="quick-text">
                     unreleased music
                 </span>
 
@@ -1349,7 +1366,7 @@
                     02
                 </span>
 
-                <span>
+                <span class="quick-text">
                     live history
                 </span>
 
@@ -1362,7 +1379,7 @@
                     03
                 </span>
 
-                <span>
+                <span class="quick-text">
                     fan archive
                 </span>
 
@@ -1373,9 +1390,9 @@
 
 
 
-        <!-- ==============================
+        <!-- =========================
              archive
-        ============================== -->
+        ========================== -->
 
         <section
             class="section"
@@ -1398,8 +1415,6 @@
 
             <div class="archive-grid">
 
-
-                <!-- fan comps -->
 
                 <a
                     href="#"
@@ -1427,7 +1442,6 @@
                 </a>
 
 
-                <!-- unreleased albums -->
 
                 <a
                     href="#"
@@ -1454,7 +1468,6 @@
                 </a>
 
 
-                <!-- side projects -->
 
                 <a
                     href="#"
@@ -1481,7 +1494,6 @@
                 </a>
 
 
-                <!-- live -->
 
                 <a
                     href="#"
@@ -1514,9 +1526,9 @@
 
 
 
-        <!-- ==============================
-             archive information
-        ============================== -->
+        <!-- =========================
+             about
+        ========================== -->
 
         <section class="section">
 
@@ -1534,10 +1546,10 @@
             </div>
 
 
-            <div class="archive-details">
+            <div class="info-grid">
 
 
-                <div class="detail-box">
+                <div class="info-box">
 
                     <h3>
                         preservation
@@ -1555,7 +1567,7 @@
                 </div>
 
 
-                <div class="detail-box blue">
+                <div class="info-box filled">
 
                     <h3>
                         unofficial
@@ -1578,9 +1590,9 @@
 
 
 
-        <!-- ==============================
+        <!-- =========================
              live history
-        ============================== -->
+        ========================== -->
 
         <section
             class="section"
@@ -1601,16 +1613,14 @@
             </div>
 
 
-            <div class="live-layout">
+            <div class="live-grid">
 
 
                 <div class="live-main">
 
-
                     <h3>
                         live recordings
                     </h3>
-
 
                     <p>
 
@@ -1620,26 +1630,14 @@
 
                     </p>
 
-
-                    <p>
-
-                        eventually this section can be organized
-                        by year, tour, venue, or individual show.
-
-                    </p>
-
-
                 </div>
-
 
 
                 <div class="live-side">
 
-
                     <h3>
                         shows & setlists
                     </h3>
-
 
                     <p>
 
@@ -1648,7 +1646,6 @@
                         to individual shows.
 
                     </p>
-
 
                 </div>
 
@@ -1659,9 +1656,9 @@
 
 
 
-        <!-- ==============================
-             support alex
-        ============================== -->
+        <!-- =========================
+             support
+        ========================== -->
 
         <section
             class="section"
@@ -1735,14 +1732,6 @@
                     </a>
 
 
-                    <a
-                        href="#"
-                        class="support-link"
-                    >
-                        merch ↗
-                    </a>
-
-
                 </div>
 
 
@@ -1752,9 +1741,9 @@
 
 
 
-        <!-- ==============================
+        <!-- =========================
              contact
-        ============================== -->
+        ========================== -->
 
         <section
             class="section"
@@ -1802,7 +1791,6 @@
                 </div>
 
 
-
                 <div class="contact-email">
 
 
@@ -1811,9 +1799,7 @@
                         class="email-link"
                     >
 
-                        lucija.f262@gmail.com
-
-                        ↗
+                        lucija.f262@gmail.com ↗
 
                     </a>
 
@@ -1827,22 +1813,19 @@
 
 
 
-        <!-- ==============================
+        <!-- =========================
              footer
-        ============================== -->
+        ========================== -->
 
         <footer>
-
 
             <span>
                 alexgunreleased.com
             </span>
 
-
             <span>
                 unofficial fan archive · not affiliated with alex g
             </span>
-
 
         </footer>
 
