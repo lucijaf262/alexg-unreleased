@@ -205,6 +205,28 @@
             text-transform: uppercase;
         }
 
+        .album-cover {
+            width: 100%;
+            max-width: 320px;
+            margin: 28px 0 0;
+        }
+
+        .album-cover img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid var(--line);
+        }
+
+        .album-caption {
+            margin-top: 9px;
+            font-size: 9px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
         .music {
             margin-top: 28px;
             border-top: 1px solid var(--blue);
@@ -321,6 +343,10 @@
 
             .project-info {
                 grid-column: 2;
+            }
+
+            .album-cover {
+                max-width: 100%;
             }
 
             footer {
@@ -443,7 +469,7 @@
                     ended up being punk” band formed in havertown, pennsylvania
                     around 2008. the group consisted of alex giannascoli on
                     guitar and vocals, samuel acchione on drums, and his brother
-                    colin acchione (aldo fisk) on bass guitar
+                    colin acchione (aldo fisk) on bass guitar.
 
                 </p>
 
@@ -535,9 +561,8 @@
                 <p class="project-description">
 
                     mother was a goth-techno project alex made with his sister
-                    rachel in 2009. very little information about the project is
-                    currently known
-                    
+                    rachel in 2009.
+
                 </p>
 
 
@@ -551,6 +576,20 @@
                 </p>
 
 
+                <div class="album-cover">
+
+                    <img
+                        src="wharl.jpg"
+                        alt="wharl album cover"
+                    >
+
+                    <div class="album-caption">
+                        wharl
+                    </div>
+
+                </div>
+
+
                 <div class="music">
 
                     <div class="music-title">
@@ -558,15 +597,17 @@
                     </div>
 
 
+                    <!-- replace the link below with your google drive link -->
+
                     <a
                         class="music-link"
-                        href="#"
+                        href="https://drive.google.com/file/d/10gKvGNfRVRmZwQAFublL4JoDy_tzXNJF/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
 
                         <span>
-                            music
+                            wharl — download
                         </span>
 
                         <span>
@@ -610,7 +651,7 @@
 
                     coolmoms was a punk band active around 2007. not much is
                     currently known about the project, although one song has
-                    resurfaced under the title “SKELETAL"
+                    resurfaced under the title “skeletal”.
 
                 </p>
 
@@ -629,7 +670,7 @@
                 <div class="music">
 
                     <div class="music-title">
-                        music
+                       music
                     </div>
 
 
@@ -641,7 +682,7 @@
                     >
 
                         <span>
-                            “SKELETAL”
+                            “skeletal”
                         </span>
 
                         <span>
