@@ -154,10 +154,7 @@
             overflow: hidden;
             border: 1px solid var(--blue);
             min-height: 330px;
-            background:
-                linear-gradient(135deg, transparent 0 48%, rgba(94, 101, 138, .08) 48% 52%, transparent 52%),
-                linear-gradient(45deg, transparent 0 48%, rgba(94, 101, 138, .06) 48% 52%, transparent 52%);
-            background-size: 46px 46px;
+            background: url("images/hero.jpg") center center / cover no-repeat;
         }
 
         .hero-media::before {
@@ -313,7 +310,25 @@
             position: relative;
             overflow: hidden;
             border: 1px solid var(--blue);
-            background: rgba(94, 101, 138, .035);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .visual-card:nth-child(1) {
+            background-image: url("images/archive-01.jpg");
+        }
+
+        .visual-card:nth-child(2) {
+            background-image: url("images/archive-02.jpg");
+        }
+
+        .visual-card:nth-child(3) {
+            background-image: url("images/archive-03.jpg");
+        }
+
+        .visual-card:nth-child(4) {
+            background-image: url("images/archive-04.gif");
         }
 
         .visual-card::before,
@@ -398,14 +413,7 @@
             min-height: 300px;
             border: 1px solid currentColor;
             overflow: hidden;
-            background:
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(255, 248, 232, .04) 0,
-                    rgba(255, 248, 232, .04) 1px,
-                    transparent 1px,
-                    transparent 9px
-                );
+            background: url("images/live.gif") center center / cover no-repeat;
         }
 
         .live-media::before {
@@ -520,7 +528,17 @@
             min-height: 180px;
             border: 1px solid var(--blue);
             overflow: hidden;
-            background: var(--soft-blue);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .support-media:nth-child(1) {
+            background-image: url("images/support-01.jpg");
+        }
+
+        .support-media:nth-child(2) {
+            background-image: url("images/support-02.gif");
         }
 
         .support-media::before {
