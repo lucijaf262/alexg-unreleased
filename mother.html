@@ -1,1 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="an unofficial archive of alex g's mother project">
+    <title>mother — alex g unreleased</title>
 
+    <style>
+        :root {
+            --cream: #fff8e8;
+            --blue: #5e658a;
+            --line: rgba(94, 101, 138, .48);
+            --soft-blue: rgba(94, 101, 138, .08);
+        }
+
+        @font-face {
+            font-family: "make fun of me";
+            src: url("fonts/makefunofmeDEMO.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--blue);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+            background: rgba(255, 248, 232, .94);
+            backdrop-filter: blur(9px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav {
+            min-height: 98px;
+            padding: 0 4.8vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 45px;
+        }
+
+        .logo {
+            flex: 0 0 auto;
+            font-family: "make fun of me", sans-serif;
+            font-size: 43px;
+            line-height: .78;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 12px 28px;
+            max-width: 960px;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .nav-links a {
+            position: relative;
+            padding: 7px 0;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+            width: 100%;
+            height: 1px;
+            background: currentcolor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .18s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        main {
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .project-header {
+            padding: 10vw 7vw 7vw;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, .7fr);
+            gap: 8vw;
+            align-items: end;
+        }
+
+        .section-kicker {
+            margin: 0 0 25px;
+            font-size: 9px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .project-title {
+            margin: 0;
+            font-family: "make fun of me", sans-serif;
+            font-size: clamp(110px, 15vw, 235px);
+            font-weight: normal;
+            line-height: .62;
+        }
+
+        .project-year {
+            margin-top: 28px;
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .project-intro {
+            border-top: 1px solid var(--blue);
+            padding-top: 18px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .project-content {
+            padding: 0 7vw 13vw;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(320px, .8fr) minmax(0, 1.2fr);
+            gap: 7vw;
+            align-items: start;
+        }
+
+        .album-cover-wrap {
+            position: relative;
+        }
+
+        .album-cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border: 1px solid var(--blue);
+            background: var(--soft-blue);
+            box-shadow: 10px 18px 38px rgba(62, 67, 94, .14);
+            transform: rotate(-.6deg);
+            overflow: hidden;
+        }
+
+        .album-cover::before {
+            content: "";
+            position: absolute;
+            inset: -9px 9px 9px -9px;
+            z-index: -1;
+            border: 1px solid rgba(94, 101, 138, .28);
+            background: rgba(94, 101, 138, .055);
+        }
+
+        .album-cover img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .album-caption {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 9px;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .info-column {
+            min-width: 0;
+        }
+
+        .info-block {
+            border-top: 1px solid var(--blue);
+            padding: 18px 0 28px;
+        }
+
+        .info-label {
+            margin-bottom: 15px;
+            font-size: 9px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .description {
+            max-width: 650px;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.95;
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: 130px minmax(0, 1fr);
+            gap: 20px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .members-label {
+            font-size: 9px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .release {
+            border-top: 1px solid var(--blue);
+            margin-top: 15px;
+        }
+
+        .release-header {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .release-name {
+            font-family: "make fun of me", sans-serif;
+            font-size: clamp(48px, 5vw, 75px);
+            line-height: .75;
+        }
+
+        .release-type {
+            font-size: 9px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .download-link {
+            min-height: 82px;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--line);
+            font-size: 12px;
+            transition: padding-left .18s ease, background .18s ease;
+        }
+
+        .download-link:hover {
+            padding-left: 12px;
+            background: var(--soft-blue);
+        }
+
+        .download-text {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .download-title {
+            font-weight: 700;
+        }
+
+        .download-description {
+            font-size: 10px;
+            opacity: .75;
+        }
+
+        .download-arrow {
+            font-size: 22px;
+            flex: 0 0 auto;
+        }
+
+        .archive-note {
+            margin: 25px 0 0;
+            max-width: 600px;
+            font-size: 10px;
+            line-height: 1.8;
+            opacity: .78;
+        }
+
+        .back-section {
+            border-top: 1px solid var(--blue);
+            padding: 24px 7vw 80px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
+            border-bottom: 1px solid currentcolor;
+            padding-bottom: 5px;
+        }
+
+        .back-link span {
+            transition: transform .18s ease;
+        }
+
+        .back-link:hover span {
+            transform: translateX(-5px);
+        }
+
+        footer {
+            min-height: 64px;
+            padding: 0 4.8vw;
+            border-top: 1px solid var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 9px;
+        }
+
+        @media (max-width: 900px) {
+
+            nav {
+                min-height: 88px;
+                align-items: flex-start;
+                padding-top: 21px;
+                padding-bottom: 18px;
+            }
+
+            .nav-links {
+                max-width: 650px;
+                gap: 9px 20px;
+                font-size: 11px;
+            }
+
+            .project-header {
+                grid-template-columns: 1fr;
+                gap: 45px;
+                padding-top: 14vw;
+            }
+
+            .project-layout {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .album-cover-wrap {
+                width: min(600px, 100%);
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            nav {
+                display: block;
+                padding: 20px;
+            }
+
+            .logo {
+                display: inline-block;
+                font-size: 25px;
+            }
+
+            .nav-links {
+                max-width: none;
+                margin-top: 18px;
+                justify-content: flex-start;
+                gap: 8px 14px;
+                font-size: 9px;
+            }
+
+            .project-header {
+                padding: 20vw 7vw 14vw;
+            }
+
+            .project-title {
+                font-size: 86px;
+                line-height: .67;
+            }
+
+            .project-intro {
+                font-size: 12px;
+                line-height: 1.85;
+            }
+
+            .project-content {
+                padding: 0 7vw 20vw;
+            }
+
+            .project-layout {
+                gap: 50px;
+            }
+
+            .album-cover {
+                transform: rotate(-.35deg);
+            }
+
+            .album-caption {
+                font-size: 8px;
+            }
+
+            .description {
+                font-size: 12px;
+                line-height: 1.9;
+            }
+
+            .members {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                font-size: 11px;
+            }
+
+            .release-header {
+                display: block;
+            }
+
+            .release-type {
+                margin-top: 12px;
+            }
+
+            .release-name {
+                font-size: 55px;
+            }
+
+            .download-link {
+                min-height: 90px;
+            }
+
+            .download-title {
+                font-size: 11px;
+            }
+
+            .download-description {
+                font-size: 9px;
+                line-height: 1.5;
+            }
+
+            .download-arrow {
+                font-size: 19px;
+            }
+
+            .back-section {
+                padding: 22px 7vw 60px;
+            }
+
+            footer {
+                padding: 18px 20px;
+                min-height: 0;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <a href="index.html" class="logo">
+            alex g unreleased
+        </a>
+
+        <div class="nav-links">
+            <a href="fan-comps.html">fan comps</a>
+            <a href="song-database.html">song database</a>
+            <a href="unreleased-albums.html">unreleased albums</a>
+            <a href="side-projects.html">side projects</a>
+            <a href="live-history.html">live history</a>
+            <a href="archive.html">archive</a>
+            <a href="interviews-archive.html">interviews archive</a>
+        </div>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="project-header">
+
+        <div>
+
+            <p class="section-kicker">
+                side project / mother
+            </p>
+
+            <h1 class="project-title">
+                mother
+            </h1>
+
+            <div class="project-year">
+                2009
+            </div>
+
+        </div>
+
+
+        <div class="project-intro">
+            a goth-techno project alex made with his sister rachel back in 2009.
+            very little information about the project is currently known,
+            with surviving material being preserved as part of the archive.
+        </div>
+
+    </section>
+
+
+    <section class="project-content">
+
+        <div class="project-layout">
+
+
+            <!-- album cover -->
+
+            <div class="album-cover-wrap">
+
+                <div class="album-cover">
+
+                    <img
+                        src="wharl.jpg"
+                        alt="wharl album cover"
+                    >
+
+                </div>
+
+                <div class="album-caption">
+
+                    <span>
+                        mother
+                    </span>
+
+                    <span>
+                        wharl
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- information -->
+
+            <div class="info-column">
+
+
+                <div class="info-block">
+
+                    <div class="info-label">
+                        about the project
+                    </div>
+
+                    <p class="description">
+                        mother was a goth-techno project alex made with his
+                        sister in 2009. the project is relatively obscure and
+                        little documentation about it has survived.
+                    </p>
+
+                </div>
+
+
+                <div class="info-block">
+
+                    <div class="info-label">
+                        project
+                    </div>
+
+                    <div class="members">
+
+                        <div class="members-label">
+                            members
+                        </div>
+
+                        <div>
+                            alex giannascoli<br>
+                            rachel giannascoli
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- release -->
+
+                <div class="release">
+
+                    <div class="release-header">
+
+                        <span class="release-name">
+                            wharl
+                        </span>
+
+                        <span class="release-type">
+                            archive download
+                        </span>
+
+                    </div>
+
+
+                    <!-- google drive link -->
+
+                    <a
+                        class="download-link"
+                        href="https://drive.google.com/file/d/10gKvGNfRVRmZwQAFublL4JoDy_tzXNJF/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <span class="download-text">
+
+                            <span class="download-title">
+                                download wharl
+                            </span>
+
+                            <span class="download-description">
+                                google drive · zip archive
+                            </span>
+
+                        </span>
+
+                        <span class="download-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <p class="archive-note">
+                    this material is presented as part of an unofficial
+                    fan archive. the original material is not hosted directly
+                    on this website; the download is provided through an
+                    external archive link
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="back-section">
+
+        <a href="side-projects.html" class="back-link">
+            <span>←</span>
+            back to side projects
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        alexgunreleased.com
+    </span>
+
+    <span>
+        mother archive
+    </span>
+
+    <span>
+        unofficial fan archive
+    </span>
+
+</footer>
+
+
+</body>
+</html>
