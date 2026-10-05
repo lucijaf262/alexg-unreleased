@@ -1420,6 +1420,163 @@
             }
         }
 
+        .archive-description {
+            max-width: 360px;
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .visual-footer p {
+            max-width: 720px;
+            font-size: 13px;
+            line-height: 1.85;
+        }
+
+        .visual-footer .feature-link {
+            font-size: 13px;
+        }
+
+        .support-copy p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .support-link-bottom {
+            font-size: 11px;
+            line-height: 1.45;
+        }
+
+        .support-links a {
+            min-height: 158px;
+        }
+
+        .support-media {
+            overflow: hidden;
+        }
+
+        .band-photo-caption {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 16px;
+            z-index: 4;
+            width: max-content;
+            max-width: calc(100% - 36px);
+            padding: 9px 12px 8px;
+            background: rgba(255, 248, 232, .91);
+            border: 1px solid rgba(94, 101, 138, .72);
+            box-shadow: 4px 4px 0 rgba(94, 101, 138, .18);
+            color: var(--blue);
+            font-size: 11px;
+            line-height: 1.35;
+            letter-spacing: .035em;
+            text-transform: lowercase;
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-text {
+            max-width: 520px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .admin-list {
+            border-top: 1px solid var(--blue);
+            margin-top: 30px;
+        }
+
+        .admin-row {
+            min-height: 78px;
+            display: grid;
+            grid-template-columns: 105px 100px minmax(0, 1fr);
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid var(--blue);
+            transition: background .18s ease, padding-left .18s ease;
+        }
+
+        .admin-row:hover {
+            background: var(--soft-blue);
+            padding-left: 10px;
+        }
+
+        .admin-name {
+            font-family: "make fun of me", sans-serif;
+            font-size: 31px;
+            line-height: .8;
+        }
+
+        .admin-role {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .admin-email {
+            justify-self: end;
+            font-size: 13px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        footer {
+            font-size: 10px;
+        }
+
+        @media (max-width: 820px) {
+            .archive-description {
+                font-size: 12px;
+            }
+
+            .visual-footer p,
+            .visual-footer .feature-link {
+                font-size: 12px;
+            }
+
+            .admin-row {
+                grid-template-columns: 90px 85px minmax(0, 1fr);
+            }
+
+            .admin-email {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .band-photo-caption {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+                max-width: calc(100% - 24px);
+                font-size: 9px;
+            }
+
+            .admin-row {
+                min-height: 94px;
+                grid-template-columns: 1fr auto;
+                gap: 7px 14px;
+                padding: 13px 0;
+            }
+
+            .admin-name {
+                font-size: 29px;
+            }
+
+            .admin-role {
+                justify-self: end;
+            }
+
+            .admin-email {
+                grid-column: 1 / -1;
+                justify-self: start;
+            }
+
+            footer {
+                font-size: 9px;
+            }
+        }
+
     </style>
 </head>
 
@@ -1492,7 +1649,7 @@
                 <a href="unreleased-albums.html" class="archive-item">
                     <span class="archive-number">03</span>
                     <span class="archive-name">unreleased albums</span>
-                    <span class="archive-description">albums, EPs and projects that were sent to small circles, recorded, or planned but never officially released</span>
+                    <span class="archive-description">albums, EPs and projects that were recorded or planned but never officially released</span>
                     <span class="archive-arrow">→</span>
                 </a>
 
@@ -1563,7 +1720,7 @@
             <div class="live-heading">
                 <p class="section-kicker">performances through the years</p>
                 <h2 class="live-title">live<br>history</h2>
-                <p class="live-blurb">from basements to bars to theaters to stadiums; a timeline of performances, changing setlists, and the recordings that survived.</p>
+                <p class="live-blurb">from early rooms and small clubs to festival stages — a timeline of performances, changing setlists and the recordings that survived.</p>
             </div>
 
             <div class="live-side">
@@ -1590,7 +1747,9 @@
 
             <div class="support-layout">
                 <div class="support-collage">
-                    <div class="support-media"></div>
+                    <div class="support-media">
+                        <div class="band-photo-caption">alex g · sam acchione · tom kelly · john heywood</div>
+                    </div>
                     <div class="support-media"></div>
                 </div>
 
@@ -1627,18 +1786,29 @@
             <div class="contact-side">
                 <p class="contact-text">
                     have a recording, scan, correction, date, photo or anything else
-                    that belongs in the archive? send it over.
+                    that belongs in the archive? send it to one of the site admins.
                 </p>
 
-                <a href="mailto:lucija.f262@gmail.com" class="email">lucija.f262@gmail.com</a>
-            </div>
-                <a href="mailto:natslashcola@gmail.com" class="email">natslashcola@gmail.com</a>
+                <div class="admin-list">
+                    <a href="mailto:lucija.f262@gmail.com" class="admin-row">
+                        <span class="admin-name">lucija</span>
+                        <span class="admin-role">site admin</span>
+                        <span class="admin-email">lucija.f262@gmail.com</span>
+                    </a>
 
+                    <a href="mailto:natslashcola@gmail.com" class="admin-row">
+                        <span class="admin-name">nathan</span>
+                        <span class="admin-role">site admin</span>
+                        <span class="admin-email">natslashcola@gmail.com</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <span>alexgunreleased.com</span>
+        <span>site admins: lucija · nathan</span>
         <span>unofficial fan archive</span>
     </footer>
 </body>
