@@ -25,20 +25,123 @@ footer{min-height:72px;padding:0 4.8vw;border-top:1px solid var(--blue);display:
 </style>
 </head>
 <body>
-<header><nav><a href="index.html" class="logo">alex g unreleased</a><div class="nav-links"><a class="active" href="fan-comps.html">fan comps</a><a href="song-database.html">song database</a><a href="unreleased-albums.html">unreleased albums</a><a href="side-projects.html">side projects</a><a href="live-history.html">live history</a><a href="archive.html">archive</a><a href="interviews-archive.html">interviews archive</a></div></nav></header>
+<header>
+<nav>
+<a href="index.html" class="logo">alex g unreleased</a>
+<div class="nav-links">
+<a class="active" href="fan-comps.html">fan comps</a>
+<a href="song-database.html">song database</a>
+<a href="unreleased-albums.html">unreleased albums</a>
+<a href="side-projects.html">side projects</a>
+<a href="live-history.html">live history</a>
+<a href="archive.html">archive</a>
+<a href="interviews-archive.html">interviews archive</a>
+</div>
+</nav>
+</header>
 <main>
-<section class="hero"><h1>fan<br>comps</h1><div class="hero-copy"><p>fan-made compilations collecting demos, unreleased songs, alternate versions, live recordings and other material from different points in alex g's history.</p><div class="stats"><div class="stat"><strong>14</strong><span>compilations</span></div><div class="stat"><strong>2015–26</strong><span>compiled</span></div><div class="stat"><strong>2008–26</strong><span>recording years represented</span></div></div></div></section>
-<div class="toolbar-wrap"><div class="toolbar"><input id="search" class="search" type="search" placeholder="search comps, tracks, compilers..." autocomplete="off"><div class="filters"><button class="filter active" data-filter="all">all</button><button class="filter" data-filter="oilage">oilage</button><button class="filter" data-filter="block perce">block perce</button><button class="filter" data-filter="nathan">nathan</button><button class="filter" data-filter="collab">collaborative</button></div></div></div>
-<section class="comps" id="comps"></section>
+<section class="hero">
+<h1>fan<br>comps</h1>
+<div class="hero-copy">
+<p>fan-made compilations collecting demos, unreleased songs, alternate versions, live recordings and other material from different points in alex g's history.</p>
+<div class="stats">
+<div class="stat">
+<strong>14</strong>
+<span>compilations</span>
+</div>
+<div class="stat">
+<strong>2015–26</strong>
+<span>compiled</span>
+</div>
+<div class="stat">
+<strong>2008–26</strong>
+<span>recording years represented</span>
+</div>
+</div>
+</div>
+</section>
+<div class="toolbar-wrap">
+<div class="toolbar">
+<input id="search" class="search" type="search" placeholder="search comps, tracks, compilers..." autocomplete="off">
+<div class="filters">
+<button class="filter active" data-filter="all">all</button>
+<button class="filter" data-filter="oilage">oilage</button>
+<button class="filter" data-filter="block perce">block perce</button>
+<button class="filter" data-filter="nathan">nathan</button>
+<button class="filter" data-filter="collab">collaborative</button>
+</div>
+</div>
+</div>
+<section class="comps" id="comps">
+</section>
 </main>
-<footer><span>alexgunreleased.com</span><span>site admins: lucija · nathan</span><span>unofficial fan archive</span></footer>
-<div class="modal" id="modal" aria-hidden="true"><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-top"><span class="modal-index" id="modal-index">fan compilation</span><button class="close" id="close" aria-label="close">×</button></div><div class="modal-body"><div><img class="modal-cover" id="modal-cover" alt=""></div><div><h2 class="modal-title" id="modal-title"></h2><div class="modal-meta" id="modal-meta"></div><p class="note" id="modal-note"></p><div class="modal-actions" id="modal-actions"></div><div class="track-heading"><h3>tracklist</h3><span id="modal-count"></span></div><ol class="tracklist" id="tracklist"></ol></div></div></div></div>
+<footer>
+<span>alexgunreleased.com</span>
+<span>site admins: lucija · nathan</span>
+<span>unofficial fan archive</span>
+</footer>
+<div class="modal" id="modal" aria-hidden="true">
+<div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div class="modal-top">
+<span class="modal-index" id="modal-index">fan compilation</span>
+<button class="close" id="close" aria-label="close">×</button>
+</div>
+<div class="modal-body">
+<div>
+<img class="modal-cover" id="modal-cover" alt="">
+</div>
+<div>
+<h2 class="modal-title" id="modal-title">
+</h2>
+<div class="modal-meta" id="modal-meta">
+</div>
+<p class="note" id="modal-note">
+</p>
+<div class="modal-actions" id="modal-actions">
+</div>
+<div class="track-heading">
+<h3>tracklist</h3>
+<span id="modal-count">
+</span>
+</div>
+<ol class="tracklist" id="tracklist">
+</ol>
+</div>
+</div>
+</div>
+</div>
 <script>
 const comps = [{"id": "monsterhead", "title": "Monsterhead", "image": "images/monsterhead.jpg", "compiler": "oilage", "compiled": "2015", "recordings": "2009–2012", "tracks": ["Maybe Baby", "Nintendo 64", "Chinese Melodies", "Krying", "You Are Great", "Skating", "Uh", "Hole In The Ground", "I Remember You", "Something 2 B", "Change My Mind", "Scared", "Written In Blood"], "youtube": "https://www.youtube.com/watch?v=nQHOjXwbV-8"}, {"id": "space", "title": "Space", "image": "images/space.jpg", "compiler": "oilage", "compiled": "2017", "recordings": "2008–2010", "tracks": ["Child's Play", "Baby Talk", "Hockey", "Talk Forever", "Ready To Move", "Doomoommommm", "Live 4 Eva With Parents", "Zack Movie", "13", "Sdfsdoifjoid", "Neeewwwwiiiieieeemmmpp", "The Weather Is Warm Tonight", "17", "Die"], "youtube": "https://www.youtube.com/watch?v=3QsLJif5OFU"}, {"id": "cross", "title": "Cross", "image": "images/cross.jpg", "compiler": "oilage", "compiled": "2017", "recordings": "2008–2010", "tracks": ["One, Two, Three, Four, Five, 666666", "You’re As Tall As The Trees!", "Weenbeans", "Blleeee", "Bailey Needs Boots", "Boom", "He Never Feeds Me", "Banjo & Bass", "Yeah Yeah Yeah Yeah", "Instru Which Is Really Good", "Wish I Wuz", "Evil", "What Does It Mean", "This Is My House", "Soflascent Memoreis", "Screaming Laughing", "This Is Just My Place In Space", "Bass"], "youtube": "https://www.youtube.com/watch?v=3hAFnyxOqHw"}, {"id": "punk", "title": "Punk", "image": "images/punk.jpg", "compiler": "oilage", "compiled": "2015", "recordings": "2008–2011", "tracks": ["Oh Baby Baby", "You", "Bike", "I Want My Life To Be A Story", "Where Are You Going", "Punk", "I'm Not Like The Other Girls", "Come Over After School", "Don't Make Me Chase After You", "Skull Love", "Go Away (Long Version)", "Tie Me Down", "Holy Fuck (Shooting Star)", "Okay", "Fix"], "youtube": "https://www.youtube.com/watch?v=aC_EZojjbsc"}, {"id": "sloth", "title": "Sloth", "image": "images/sloth.jpg", "compiler": "block perce", "compiled": "2019", "recordings": "2010–2012, plus “Fell” (2018)", "tracks": ["Cards", "Molly", "Sloth", "Not So Tough", "Sum Secret", "Break", "Cold", "Kara", "Why Do You", "Trick", "I Was Here", "Fell"], "youtube": "https://www.youtube.com/watch?v=HVJ0gwStv4M"}, {"id": "nothing", "title": "Nothing", "image": "images/nothing.jpg", "compiler": "unknown", "compiled": "2015", "recordings": "2009–2011", "tracks": ["The Cult of Lord Jesus H. Christ", "Nothing", "Light", "Dreem Machine:", "Be Kind", "Hit", "Not Anywhere", "Do It", "Kong", "Wichita", "Scar Tattoo", "Exist", "Outro"], "youtube": "https://www.youtube.com/watch?v=ka1i3XISbaE"}, {"id": "tangled", "title": "Tangled", "image": "images/tangled.jpg", "compiler": "oilage", "compiled": "2016", "recordings": "2009–2015", "tracks": ["Sally", "Trouble", "Animal Friends", "Jack+Wife", "Bludd", "Tangled", "Tunnel", "World/Insured", "My Name is Pierson", "Shit", "Bees", "Library Lady", "Zuicide", "Deliver"], "youtube": "https://www.youtube.com/watch?v=0xwx14YvTc0"}, {"id": "high", "title": "HIGH", "image": "images/high.jpg", "compiler": "block perce", "compiled": "2018", "recordings": "2009–2016", "tracks": ["everything is ok", "slooptee", "screwy people", "colleen", "muppet", "east coast", "untitled (instrumental)", "2626 (cock)", "not really", "track", "untitled piano (instrumental)", "5129", "treehouse (ft. emily yacina)", "high", "pretend"], "youtube": "https://www.youtube.com/watch?v=dt9_w0Qf8vM"}, {"id": "fay", "title": "FAY", "image": "images/fay.jpg", "compiler": "block perce", "compiled": "2020", "recordings": "2015–2020", "tracks": ["Tour Vid", "tourvid 2", "Maddey Puppets", "Rio", "3", "Found", "Fay", "Piano", "Rosebush", "Dalmation", "Organ"], "youtube": "https://www.youtube.com/watch?v=PSp7WC-ZNM8"}, {"id": "musicfordogs", "title": "MUSIC FOR DOGS", "image": "images/musicfordogs.jpg", "compiler": "block perce & nathan", "compiled": "2025", "recordings": "2009–2015", "tracks": ["Ride Home", "Bad House", "Nuts", "Complain", "Rock Buddy (Uncle Benny)", "July 27th 2015", "Rubberthump 2", "Rubberthump 3", "Whenever You Go"], "youtube": "https://www.youtube.com/watch?v=PTIHbMRa5xI"}, {"id": "dsides", "title": "D-Sides (Demos)", "image": "images/dsides.jpg", "compiler": "block perce & nathan", "compiled": "2025", "recordings": "2008–2011", "tracks": ["After Ur Gone (Acoustic Demo)", "Inna (Sarah Demo)", "Something To Be (Something 2 B Demo)", "Remember (Electric Demo)", "Youthinasia (Early Demo)", "Tie Me Down (Early Demo)", "Water (Acoustic Demo)", "Mis (Demo)", "Snot (Skin Cells Demo)", "Buhroke (3) (Early Demo)"], "youtube": "https://www.youtube.com/watch?v=bYs452mG6Cw"}, {"id": "esides", "title": "E-Sides and Rarities", "image": "images/esides.jpg", "compiler": "block perce & nathan", "compiled": "2025", "recordings": "2009–2022", "tracks": ["Early Morning Waiting (Alt. Ver)", "Big World (Solo Ver.)", "Harvey (Early Mix)", "Deliver (Vocal Ver.)", "Freedom (Alt. Mix)", "Poison Root (Alt. Mix)", "Gretel (Acoustic Ver.)", "Icehead (Early Mix)", "Paint (Alt. Ver)", "Buhroke (3rd Alt. Ver.)", "Nintendo 64 (Long Ver.)", "Bad Man (Piano Ver.)", "Medication (Early Mix)", "Sportstar (Alt. Mix)", "Skating (Alt. No Bass Ver.)", "Bobby (Redo Demo)", "Sometimes (Alt. Mix)", "Sugarhouse (Acoustic Ver.)"], "youtube": ""}, {"id": "intheyard", "title": "In The Yard", "image": "images/intheyard.jpg", "compiler": "nathan", "compiled": "2026", "recordings": "2015–2026", "tracks": ["Good Green Friend", "All You Wanted", "Wherever You Go", "In The Yard", "AfterlifeDemo", "Keep My Mouth Shut", "Not Afraid", "Tourvid3", "MINE"], "youtube": "https://www.youtube.com/watch?v=6GGYCjrr9ps"}, {"id": "renditions", "title": "Renditions", "image": "images/renditions.jpg", "compiler": "nathan", "compiled": "2026", "recordings": "2011–2025", "note": "renditions is a collection of alternate versions, live recordings, acoustic performances, performed demos, and reworked takes from across different eras. some are full-band live versions that hit harder, some are quieter acoustic recordings, and some are alternate versions that feel different enough to stand on their own. basically: songs you probably know, but slightly different — more powerful, stripped down, sped up, slowed down, or caught in a different era. tracks 13 and 14 had not been online before the compilation.", "tracks": ["Gretel (Live)", "Walk Away (Live)", "Animals (Live)", "Near (Live)", "Fay (Live)", "Soaker (Live)", "Be Kind (Electric Live)", "Icehead (Live)", "Brite Boy (Fast Alt)", "Gnaw (Slow Alt)", "Early Morning Waiting (Live Demo)", "Good Green Friend (Acoustic)", "Thorns (Acoustic Alternate)", "Mud (Acoustic Alternate)", "Blessing (Live Demo)", "Salt (Live Demo)", "So (Acoustic)", "You Are Great (Acoustic)"], "youtube": "https://www.youtube.com/watch?v=2SiziooYlNM"}];
 const grid=document.getElementById("comps"),search=document.getElementById("search"),filters=[...document.querySelectorAll(".filter")],modal=document.getElementById("modal"),closeButton=document.getElementById("close");let activeFilter="all";
 function compilerMatches(comp,filter){const compiler=comp.compiler.toLowerCase();if(filter==="all")return true;if(filter==="collab")return compiler.includes("&");return compiler.includes(filter)}
-function render(){const q=search.value.trim().toLowerCase();const visible=comps.filter(comp=>{const haystack=[comp.title,comp.compiler,comp.compiled,comp.recordings,...comp.tracks].join(" ").toLowerCase();return compilerMatches(comp,activeFilter)&&haystack.includes(q)});if(!visible.length){grid.innerHTML='<div class="empty">nothing matched that search.</div>';return}grid.innerHTML=visible.map(comp=>`<article class="comp"><button class="cover-button" data-open="${comp.id}" aria-label="open ${comp.title} tracklist"><div class="cover-wrap"><img class="cover" src="${comp.image}" alt="${comp.title} cover"></div></button><div class="comp-head"><h2 class="comp-title">${comp.title}</h2><span class="year">${comp.compiled}</span></div><div class="meta"><div><span>compiled by</span>${comp.compiler}</div><div><span>recordings</span>${comp.recordings}</div><div><span>tracks</span>${comp.tracks.length}</div><div><span>type</span>fan compilation</div></div><div class="card-actions"><button class="text-button" data-open="${comp.id}">view tracklist →</button>${comp.youtube?`<a class="text-link" href="${comp.youtube}" target="_blank" rel="noopener noreferrer">youtube ↗</a>`:""}<a class="text-link drive-placeholder" href="#" data-drive="${comp.id}">google drive ↗</a></div></article>`).join("");document.querySelectorAll("[data-open]").forEach(el=>el.addEventListener("click",()=>openComp(el.dataset.open)));document.querySelectorAll("[data-drive]").forEach(el=>el.addEventListener("click",e=>e.preventDefault()))}
-function openComp(id){const comp=comps.find(item=>item.id===id);if(!comp)return;document.getElementById("modal-index").textContent=`fan compilation · ${comp.compiled}`;document.getElementById("modal-title").textContent=comp.title;const cover=document.getElementById("modal-cover");cover.src=comp.image;cover.alt=`${comp.title} cover`;document.getElementById("modal-meta").innerHTML=`<span class="pill">compiled by ${comp.compiler}</span><span class="pill">compiled ${comp.compiled}</span><span class="pill">recorded ${comp.recordings}</span><span class="pill">${comp.tracks.length} tracks</span>`;document.getElementById("modal-note").textContent=comp.note||`a ${comp.tracks.length}-track fan compilation compiled by ${comp.compiler} in ${comp.compiled}, collecting recordings from ${comp.recordings}.`;document.getElementById("modal-actions").innerHTML=`${comp.youtube?`<a class="action" href="${comp.youtube}" target="_blank" rel="noopener noreferrer">youtube ↗</a>`:""}<a class="action drive-placeholder" href="#" id="modal-drive">google drive ↗</a>`;document.getElementById("modal-drive").addEventListener("click",e=>e.preventDefault());document.getElementById("modal-count").textContent=`${comp.tracks.length} tracks`;document.getElementById("tracklist").innerHTML=comp.tracks.map(track=>`<li>${track}</li>`).join("");modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.classList.add("modal-open")}
+function render(){const q=search.value.trim().toLowerCase();const visible=comps.filter(comp=>{const haystack=[comp.title,comp.compiler,comp.compiled,comp.recordings,...comp.tracks].join(" ").toLowerCase();return compilerMatches(comp,activeFilter)&&haystack.includes(q)});if(!visible.length){grid.innerHTML='<div class="empty">nothing matched that search.</div>';return}grid.innerHTML=visible.map(comp=>`<article class="comp">
+<button class="cover-button" data-open="${comp.id}" aria-label="open ${comp.title} tracklist">
+<div class="cover-wrap">
+<img class="cover" src="${comp.image}" alt="${comp.title} cover">
+</div>
+</button>
+<div class="comp-head">
+<h2 class="comp-title">${comp.title}</h2>
+<span class="year">${comp.compiled}</span>
+</div>
+<div class="meta">
+<div>
+<span>compiled by</span>${comp.compiler}</div>
+<div>
+<span>recordings</span>${comp.recordings}</div>
+<div>
+<span>tracks</span>${comp.tracks.length}</div>
+<div>
+<span>type</span>fan compilation</div>
+</div>
+<div class="card-actions">
+<button class="text-button" data-open="${comp.id}">view tracklist →</button>${comp.youtube?`<a class="text-link" href="${comp.youtube}" target="_blank" rel="noopener noreferrer">youtube ↗</a>`:""}<a class="text-link drive-placeholder" href="#" data-drive="${comp.id}">google drive ↗</a>
+</div>
+</article>`).join("");document.querySelectorAll("[data-open]").forEach(el=>el.addEventListener("click",()=>openComp(el.dataset.open)));document.querySelectorAll("[data-drive]").forEach(el=>el.addEventListener("click",e=>e.preventDefault()))}
+function openComp(id){const comp=comps.find(item=>item.id===id);if(!comp)return;document.getElementById("modal-index").textContent=`fan compilation · ${comp.compiled}`;document.getElementById("modal-title").textContent=comp.title;const cover=document.getElementById("modal-cover");cover.src=comp.image;cover.alt=`${comp.title} cover`;document.getElementById("modal-meta").innerHTML=`<span class="pill">compiled by ${comp.compiler}</span>
+<span class="pill">compiled ${comp.compiled}</span>
+<span class="pill">recorded ${comp.recordings}</span>
+<span class="pill">${comp.tracks.length} tracks</span>`;document.getElementById("modal-note").textContent=comp.note||`a ${comp.tracks.length}-track fan compilation compiled by ${comp.compiler} in ${comp.compiled}, collecting recordings from ${comp.recordings}.`;document.getElementById("modal-actions").innerHTML=`${comp.youtube?`<a class="action" href="${comp.youtube}" target="_blank" rel="noopener noreferrer">youtube ↗</a>`:""}<a class="action drive-placeholder" href="#" id="modal-drive">google drive ↗</a>`;document.getElementById("modal-drive").addEventListener("click",e=>e.preventDefault());document.getElementById("modal-count").textContent=`${comp.tracks.length} tracks`;document.getElementById("tracklist").innerHTML=comp.tracks.map(track=>`<li>${track}</li>`).join("");modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.classList.add("modal-open")}
 function closeModal(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("modal-open")}
 closeButton.addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))closeModal()});search.addEventListener("input",render);filters.forEach(button=>button.addEventListener("click",()=>{filters.forEach(item=>item.classList.remove("active"));button.classList.add("active");activeFilter=button.dataset.filter;render()}));render();
 </script>
